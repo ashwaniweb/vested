@@ -1,0 +1,54 @@
+.clientLogo {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  align-content: space-around;
+  margin: 60px 0;
+  img {
+    margin: 15px;
+    max-width: 262px;
+    &:nth-child(6n),
+    &:nth-child(7n),
+    &:nth-child(8n) {
+      margin: 15px 50px;
+    }
+  }
+}
+
+.footerBanner {
+  position: relative;
+  img {
+    width: 100%;
+  }
+  .center {
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h5 {
+      z-index: 5;
+      margin-bottom: 30px;
+      margin-top: 0;
+      font-size: 48px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 2.3px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .btn-default {
+      padding: 15px 50px;
+      border-radius: 47px;
+      background-color: #ffffff;
+    }
+  }
+}
