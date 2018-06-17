@@ -4,21 +4,30 @@ import { Navbar, Nav, NavItem } from "react-bootstrap";
 class NavBar extends Component {
   constructor(props) {
     super(props);
-    this.state = { transform: 0 };
+    this.state = {
+      bgEnabled: false,
+      home: false
+    };
     this.myRef = React.createRef();
   }
-  fireOnScroll(event) {
-    let scrollTop = event.srcElement.body.scrollTop;
-    // itemTranslate = Math.min(0, scrollTop / 3 - 60);
-    console.log("Fire!", scrollTop);
-  }
-
+  fireOnScroll = event => {
+    let bodyScrollTop =
+      document.documentElement.scrollTop || document.body.scrollTop;
+    if (bodyScrollTop > 80 && !this.state.bgEnabled) {
+      this.setState({ bgEnabled: true, home: false });
+    } else if (this.state.bgEnabled) {
+      this.setState({ bgEnabled: false, home: true });
+    } else if (bodyScrollTop < 80 && this.state.bgEnabled) {
+      this.setState({ bgEnabled: false });
+    }
+  };
   componentDidMount(event) {
-    window.addEventListener("scroll", event => this.fireOnScroll(event));
+    let home = true;
+    this.setState({ currentPath: window.location.pathname, home });
+    document.addEventListener("scroll", this.fireOnScroll);
   }
-
-  componentWillUnmount(event) {
-    window.removeEventListener("scroll", event => this.fireOnScroll(event));
+  componentWillUnmount() {
+    document.removeEventListener("scroll", this.fireOnScroll);
   }
 
   render() {
@@ -26,7 +35,7 @@ class NavBar extends Component {
       <Navbar
         collapseOnSelect
         fixedTop={true}
-        className={"sticky"}
+        className={this.state.bgEnabled && "sticky"}
         ref={this.myRef}
       >
         <Navbar.Header>

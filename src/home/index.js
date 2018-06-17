@@ -5,6 +5,7 @@ import "./home.scss";
 import WhatWeBelieve from "./whatWeBelieve";
 import HowItWorks from "./howItWork";
 import Benefits from "./benefits";
+import Stories from "./stories";
 
 class Home extends Component {
   render() {
@@ -21,6 +22,7 @@ class Home extends Component {
       <WhatWeBelieve />,
       <HowItWorks />,
       <Benefits />,
+      <Stories />,
       <OurClients />,
       <Banner
         heading="Ready to Revamp Your Hiring Process?"

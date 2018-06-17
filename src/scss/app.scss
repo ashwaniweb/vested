@@ -1,3 +1,5 @@
+@import "./footer";
+
 img {
   max-width: 100%;
 }
@@ -9,6 +11,7 @@ section {
   padding-bottom: 50px;
   &:first-of-type {
     padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 .heading {
@@ -32,6 +35,20 @@ section {
   background: #00000012;
   min-height: 80px;
   border: 0;
+  &.sticky {
+    // background-color: $color_red;
+    background-color: #fafafa;
+    background-color: #fff;
+    box-shadow: 0 2px 14px 0 rgba(1, 1, 1, 0.1);
+    .menu-item {
+      &.login {
+        span {
+          // color: $color_blue;
+          // border-color: $color_blue;
+        }
+      }
+    }
+  }
   .navbar-brand {
     float: left;
     height: 80px;

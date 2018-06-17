@@ -1,43 +1,87 @@
 import React, { Component } from "react";
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-bootstrap";
-class Footer extends Component {
+import { Grid, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+export default class Footer extends React.Component {
   render() {
     return (
-      <Navbar inverse collapseOnSelect>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <a href="#brand">React-Bootstrap</a>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-          <Nav>
-            <NavItem eventKey={1} href="#">
-              Link
-            </NavItem>
-            <NavItem eventKey={2} href="#">
-              Link
-            </NavItem>
-            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-              <MenuItem eventKey={3.1}>Action</MenuItem>
-              <MenuItem eventKey={3.2}>Another action</MenuItem>
-              <MenuItem eventKey={3.3}>Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey={3.3}>Separated link</MenuItem>
-            </NavDropdown>
-          </Nav>
-          <Nav pullRight>
-            <NavItem eventKey={1} href="#">
-              Link Right
-            </NavItem>
-            <NavItem eventKey={2} href="#">
-              Link Right
-            </NavItem>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+      <footer className="footer">
+        <Links />
+        <Policy />
+      </footer>
     );
   }
 }
 
-export default Footer;
+class Links extends React.Component {
+  render() {
+    return (
+      <div className="links">
+        <Grid>
+          <Row>
+            <Col sm={12} md={8} className="site-map">
+              <Link to="/professionals">
+                <span> Professionals </span>
+              </Link>
+              <Link to="/employers">
+                <span> Employers </span>
+              </Link>
+              <Link to="/consulting">
+                <span> Consulting </span>
+              </Link>
+              <Link to="/temporary-jobs">
+                <span> Temporary </span>
+              </Link>
+              <a href="https://getvested.io/blog/" target="_blank">
+                <span> Blog </span>
+              </a>
+              <Link to="/faq">
+                <span> FAQ </span>
+              </Link>
+            </Col>
+            <Col sm={12} md={4} className="social">
+              <span> FOLLOW US </span>
+              <a href="https://www.facebook.com/VestedTech/" target="_blank">
+                <img src="/images/general/Facebook.svg" alt="Facebook" />
+              </a>
+              <a href="https://twitter.com/VestedHR" target="_blank">
+                <img src="/images/general/Twitter.svg" alt="Twitter" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/vestedtechnology"
+                target="_blank"
+              >
+                <img src="/images/general/Linkedin.svg" alt="Linkedin" />
+              </a>
+            </Col>
+          </Row>
+        </Grid>
+      </div>
+    );
+  }
+}
+
+class Policy extends React.Component {
+  render() {
+    return (
+      <div className="policy">
+        <Grid>
+          <Row>
+            <Col sm={12} md={8}>
+              <Link to="/terms-of-service">
+                <span>Terms of Service</span>
+              </Link>
+              <Link to="/privacy-policy">
+                <span>Privacy Policy</span>
+              </Link>
+            </Col>
+            <Col sm={12} md={4} className="copyright">
+              <span>
+                © Copyright Vested Technology {new Date().getFullYear()}
+              </span>
+            </Col>
+          </Row>
+        </Grid>
+      </div>
+    );
+  }
+}

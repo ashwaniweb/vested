@@ -3,8 +3,8 @@ import React, { Component } from "react";
 import { Row, Grid } from "react-bootstrap";
 const ClientsLog = [
   {
-    name: "test",
-    url: "rewardable.png"
+    name: "Bulldog",
+    url: "bulldog.png"
   },
   {
     name: "Industrious",
@@ -50,15 +50,39 @@ class OurClients extends Component {
         <Grid>
           <Row>
             <div className="clientLogo">
-              {ClientsLog.map(item => {
-                return (
-                  <img
-                    key={item.name}
-                    src={"./images/clients/" + item.url}
-                    alt={item.name}
-                  />
-                );
-              })}
+              <div className="logoRow">
+                {ClientsLog.slice(0, 5).map(item => {
+                  return (
+                    <img
+                      key={item.name}
+                      src={"./images/clients/" + item.url}
+                      alt={item.name}
+                    />
+                  );
+                })}
+              </div>
+              <div className="logoRow">
+                {ClientsLog.slice(5, 8).map(item => {
+                  return (
+                    <img
+                      key={item.name}
+                      src={"./images/clients/" + item.url}
+                      alt={item.name}
+                    />
+                  );
+                })}
+              </div>
+              <div className="logoRow">
+                {ClientsLog.slice(8, 10).map(item => {
+                  return (
+                    <img
+                      key={item.name}
+                      src={"./images/clients/" + item.url}
+                      alt={item.name}
+                    />
+                  );
+                })}
+              </div>
             </div>
           </Row>
         </Grid>
