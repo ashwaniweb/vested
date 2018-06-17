@@ -35,6 +35,7 @@ section {
   background: #00000012;
   min-height: 80px;
   border: 0;
+  transition: 0.2s linear;
   &.sticky {
     // background-color: $color_red;
     background-color: #fafafa;
