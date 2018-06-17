@@ -8,15 +8,13 @@ import Footer from "./common/footer";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Router>
-          <div>
-            <NavBar />
-            <Route exact path="/" component={MainContent} />
-            <Footer />
-          </div>
-        </Router>
-      </div>
+      <Router>
+        <div className="App">
+          <NavBar />
+          <Route exact path="/" component={MainContent} />
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }

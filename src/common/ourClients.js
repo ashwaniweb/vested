@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Row, Grid, Button } from "react-bootstrap";
+// import { Link } from "react-router-dom";
+import { Row, Grid } from "react-bootstrap";
 const ClientsLog = [
   {
     name: "test",
@@ -46,21 +46,23 @@ const ClientsLog = [
 class OurClients extends Component {
   render() {
     return (
-      <Grid>
-        <Row>
-          <div className="clientLogo">
-            {ClientsLog.map(item => {
-              return (
-                <img
-                  key={item.name}
-                  src={"./images/clients/" + item.url}
-                  alt={item.name}
-                />
-              );
-            })}
-          </div>
-        </Row>
-      </Grid>
+      <section>
+        <Grid>
+          <Row>
+            <div className="clientLogo">
+              {ClientsLog.map(item => {
+                return (
+                  <img
+                    key={item.name}
+                    src={"./images/clients/" + item.url}
+                    alt={item.name}
+                  />
+                );
+              })}
+            </div>
+          </Row>
+        </Grid>
+      </section>
     );
   }
 }

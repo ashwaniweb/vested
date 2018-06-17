@@ -1,31 +1,43 @@
 import React, { Component } from "react";
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-bootstrap";
+import ReactDOM from "react-dom";
+import { Navbar, Nav, NavItem } from "react-bootstrap";
 class NavBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { transform: 0 };
+    this.myRef = React.createRef();
+  }
+  fireOnScroll(event) {
+    let scrollTop = event.srcElement.body.scrollTop;
+    // itemTranslate = Math.min(0, scrollTop / 3 - 60);
+    console.log("Fire!", scrollTop);
+  }
+
+  componentDidMount(event) {
+    window.addEventListener("scroll", event => this.fireOnScroll(event));
+  }
+
+  componentWillUnmount(event) {
+    window.removeEventListener("scroll", event => this.fireOnScroll(event));
+  }
+
   render() {
     return (
-      <Navbar collapseOnSelect>
+      <Navbar
+        collapseOnSelect
+        fixedTop={true}
+        className={"sticky"}
+        ref={this.myRef}
+      >
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#brand">React-Bootstrap</a>
+            <a href="#brand">
+              <img src="/images/vested.svg" alt="vested" />
+            </a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav>
-            <NavItem eventKey={1} href="#">
-              Link
-            </NavItem>
-            <NavItem eventKey={2} href="#">
-              Link
-            </NavItem>
-            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-              <MenuItem eventKey={3.1}>Action</MenuItem>
-              <MenuItem eventKey={3.2}>Another action</MenuItem>
-              <MenuItem eventKey={3.3}>Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey={3.3}>Separated link</MenuItem>
-            </NavDropdown>
-          </Nav>
           <Nav pullRight>
             <NavItem eventKey={1} href="#">
               Link Right

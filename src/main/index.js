@@ -5,12 +5,10 @@ import About from "../about";
 class MainContent extends Component {
   render() {
     return (
-      <div className="App">
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+      </Switch>
     );
   }
 }

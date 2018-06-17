@@ -1,3 +1,134 @@
+.whatWeBelieve {
+  padding: 30px 0 50px 0;
+  h2 {
+    margin: 15px 0;
+  }
+  p {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.93;
+    letter-spacing: normal;
+    text-align: center;
+    color: #0000008a;
+  }
+}
+
+/* The actual timeline (the vertical ruler) */
+.howToWork {
+  h2 {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: #7070851e;
+    top: 15px;
+    bottom: 130px;
+    left: 50%;
+    margin-left: -2px;
+  }
+  .item {
+    padding: 10px 40px 50px 40px;
+    position: relative;
+    width: 50%;
+    counter-increment: myIndex;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      right: -8px;
+      background-color: #1870e6;
+      top: 8px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    &:before {
+      content: counter(myIndex, decimal-leading-zero);
+      font-size: 78px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: 0.7px;
+      text-align: center;
+      color: #e7eef7;
+      top: 0;
+      position: absolute;
+      z-index: 1;
+    }
+    &.left {
+      left: 0;
+      text-align: right;
+      &:before {
+        position: absolute;
+        right: -140px;
+      }
+    }
+
+    &.right {
+      left: 50%;
+      text-align: left;
+      &:before {
+        left: -140px;
+      }
+      &:after {
+        left: -8px;
+      }
+    }
+    .content {
+      padding: 0 30px;
+      // background-color: #ddd;
+      position: relative;
+      // border-radius: 6px;
+      h3 {
+        font-size: 24px;
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #1870e6;
+        margin-top: 0;
+      }
+    }
+  }
+}
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+  .item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    &::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  }
+  .left::after {
+    left: 15px;
+  }
+  .right {
+    &::after {
+      left: 15px;
+    }
+    left: 0%;
+  }
+}
+
 .clientLogo {
   display: flex;
   width: 100%;
@@ -17,38 +148,26 @@
   }
 }
 
-.footerBanner {
-  position: relative;
-  img {
-    width: 100%;
-  }
-  .center {
-    transform: translateX(-50%) translateY(-50%);
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    position: absolute;
+.benefits {
+  .row {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    h5 {
-      z-index: 5;
-      margin-bottom: 30px;
+  }
+  .box {
+    margin: 0 10px;
+    background-color: #fff;
+    height: 100%;
+    padding: 30px;
+    h4 {
+      font-size: 22px;
+      font-weight: bold;
+      color: #000000de;
+      margin-bottom: 20px;
       margin-top: 0;
-      font-size: 48px;
-      font-weight: 600;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: 2.3px;
-      text-align: center;
-      color: #ffffff;
     }
-
-    .btn-default {
-      padding: 15px 50px;
-      border-radius: 47px;
-      background-color: #ffffff;
+    p {
+      font-size: 18px;
+      line-height: 1.67;
+      color: #0000008a;
     }
   }
 }
