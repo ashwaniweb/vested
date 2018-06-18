@@ -15,7 +15,7 @@ class Stories extends Component {
             <Col xs={12} md={8}>
               <div className="box">
                 <img
-                  src="/images/professionals/testimonial1.jpg"
+                  src="/images/Nicola.png"
                   alt="Nicola M, Controller"
                   className="img-circle"
                 />
