@@ -1,16 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "../home";
-import About from "../about";
-class MainContent extends Component {
-  render() {
-    return (
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-      </Switch>
-    );
-  }
-}
+import Candidates from "../candidates";
+const Main = () => (
+    <main>
+        <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/candidates" component={Candidates} />
+        </Switch>
+    </main>
+);
 
-export default MainContent;
+export default Main;

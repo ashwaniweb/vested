@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import { Navbar, Nav, NavItem } from "react-bootstrap";
 class NavBar extends Component {
   constructor(props) {
@@ -49,10 +48,13 @@ class NavBar extends Component {
         <Navbar.Collapse>
           <Nav pullRight>
             <NavItem eventKey={1} href="#">
-              Link Right
+              Professionals
+            </NavItem>
+            <NavItem eventKey={1} href="#">
+              Login
             </NavItem>
             <NavItem eventKey={2} href="#">
-              Link Right
+              Sign Up
             </NavItem>
           </Nav>
         </Navbar.Collapse>

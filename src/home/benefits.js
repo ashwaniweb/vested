@@ -1,34 +1,42 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Row, Grid, Button, Col } from "react-bootstrap";
-class Benefits extends Component {
+import { Row, Grid, Col } from "react-bootstrap";
+class TheBenefits extends Component {
   render() {
     return (
-      <section className="dark benefits">
+      <section className="theBenefits dark">
         <Grid>
           <Row>
             <Col xs={12} md={12} className="text-center">
-              <h2 className="heading">Benefits</h2>
+              <h2 className="heading">The Benefits</h2>
             </Col>
           </Row>
           <Row>
-            <Col xs={12} md={6}>
+            <Col xs={12} md={4}>
+              <img src="/images/group-5.png" alt="Stand Apart" />
               <div className="box">
-                <h4>Stand Apart From The Pack</h4>
+                <h4>Lower Time to Fill</h4>
                 <p>
-                  Resumes are broken. Forget about credentials, background, and
-                  recruiter bias. Vested presents a 360 degree view of your work
-                  personality and skills so you find the right step in your
-                  career
+                  Vested screens and assesses all candidates to save you time
                 </p>
               </div>
             </Col>
-            <Col xs={12} md={6}>
+            <Col xs={12} md={4}>
+              <img src="/images/team.svg" alt="Stand Apart" />
               <div className="box">
-                <h4>Find a company you love</h4>
+                <h4>Increased diversity</h4>
                 <p>
-                  Our process assess multiple qualities of both the employee and
-                  employer allowing us to find you a perfect fit
+                  Eliminate bias by seeing who a candidate is, not just where
+                  they’ve worked
+                </p>
+              </div>
+            </Col>
+            <Col xs={12} md={4}>
+              <img src="/images/team.svg" alt="Stand Apart" />
+              <div className="box">
+                <h4>Reduce Attrition</h4>
+                <p>
+                  Identify candidates that fit your company’s culture to
+                  minimize turnover
                 </p>
               </div>
             </Col>
@@ -39,4 +47,4 @@ class Benefits extends Component {
   }
 }
 
-export default Benefits;
+export default TheBenefits;

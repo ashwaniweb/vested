@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./scss/app.scss";
-import MainContent from "./main";
+import Main from "./main";
 import NavBar from "./common/header";
 import Footer from "./common/footer";
 
@@ -11,7 +11,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <NavBar />
-          <Route exact path="/" component={MainContent} />
+          <Main />
           <Footer />
         </div>
       </Router>
