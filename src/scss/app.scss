@@ -37,9 +37,7 @@ section {
   border: 0;
   transition: 0.2s linear;
   &.sticky {
-    // background-color: $color_red;
-    background-color: #fafafa;
-    background-color: #fff;
+    background-color: #053793;
     box-shadow: 0 2px 14px 0 rgba(1, 1, 1, 0.1);
     .menu-item {
       &.login {
@@ -115,6 +113,29 @@ section {
         background-color: #1870e6;
         color: #ffffff;
       }
+    }
+  }
+}
+
+.clientLogo {
+  .logoRow {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    img {
+      max-width: 280px;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+    &:nth-child(2n) {
+      justify-content: space-around;
+    }
+    &:last-child {
+      justify-content: space-around;
     }
   }
 }

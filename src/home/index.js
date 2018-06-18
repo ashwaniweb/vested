@@ -1,38 +1,35 @@
-import React, { Component } from "react";
-import OurClients from "../common/ourClients";
+import React from "react";
+import ClientsLogo from "../common/clientsLogo";
 import Banner from "../common/banner";
+import WhatWho from "../common/whatWho";
+import HeroBanner from "./mainBanner";
+import TheBenefits from "./benefits";
+import HowWeDoIt from "./howWeDoIt";
+import OurClients from "./ourClients";
 import "./home.scss";
-import WhatWeBelieve from "./whatWeBelieve";
-import HowItWorks from "./howItWork";
-import Benefits from "./benefits";
-import Stories from "./stories";
 
-class Home extends Component {
+const Home = () => ({
   render() {
     return [
-      <Banner
-        heading="Find A Job You Love"
-        img="./images/water-blue-ocean.jpg"
-        imgAlt="Ready to Revamp Your Hiring Process?"
-        content="Show Off Your Skills.  Stand Out.  Find Meaningful Work."
-        buttonLink="/"
-        buttonText="Sign Up"
-        btnStyle="primary"
+      <HeroBanner />,
+      <WhatWho
+        heading="Who We Are"
+        text="We’re the first talent marketplace that goes beyond resumes and algorithms.  We provide a 360 degree view of candidates’ skills, personality, and values before they reach your desk."
+        dark={false}
       />,
-      <WhatWeBelieve />,
-      <HowItWorks />,
-      <Benefits />,
-      <Stories />,
+      <TheBenefits />,
+      <HowWeDoIt />,
       <OurClients />,
+      <ClientsLogo />,
       <Banner
         heading="Ready to Revamp Your Hiring Process?"
-        img="./images/brookeCagle609873Unsplash.png"
+        img="./images/splash.png"
         imgAlt="Ready to Revamp Your Hiring Process?"
         buttonLink="/"
         buttonText="Get Started"
       />
     ];
   }
-}
+});
 
 export default Home;

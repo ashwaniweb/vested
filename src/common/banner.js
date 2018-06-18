@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Row, Grid, Button } from "react-bootstrap";
-class Banner extends Component {
+const Banner = () => ({
   render() {
     return (
       <section className="banner">
@@ -45,6 +45,6 @@ class Banner extends Component {
       </section>
     );
   }
-}
+});
 
 export default Banner;
