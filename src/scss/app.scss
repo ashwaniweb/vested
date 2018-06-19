@@ -1,5 +1,6 @@
+@import "./base";
 @import "./footer";
-
+@import "./menu";
 img {
   max-width: 100%;
 }
@@ -31,31 +32,31 @@ section {
   }
 }
 
-.navbar-default {
-  background: #00000012;
-  min-height: 80px;
-  border: 0;
-  transition: 0.2s linear;
-  &.sticky {
-    background-color: #053793;
-    box-shadow: 0 2px 14px 0 rgba(1, 1, 1, 0.1);
-    .menu-item {
-      &.login {
-        span {
-          // color: $color_blue;
-          // border-color: $color_blue;
-        }
-      }
-    }
-  }
-  .navbar-brand {
-    float: left;
-    height: 80px;
-    padding: 15px 15px;
-    font-size: 18px;
-    line-height: 20px;
-  }
-}
+// .navbar-default {
+//   background: #00000012;
+//   min-height: 80px;
+//   border: 0;
+//   transition: 0.2s linear;
+//   &.sticky {
+//     background-color: #053793;
+//     box-shadow: 0 2px 14px 0 rgba(1, 1, 1, 0.1);
+//     .menu-item {
+//       &.login {
+//         span {
+//           // color: $color_blue;
+//           // border-color: $color_blue;
+//         }
+//       }
+//     }
+//   }
+//   .navbar-brand {
+//     float: left;
+//     height: 80px;
+//     padding: 15px 15px;
+//     font-size: 18px;
+//     line-height: 20px;
+//   }
+// }
 
 .banner {
   position: relative;

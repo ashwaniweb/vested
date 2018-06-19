@@ -1,7 +1,6 @@
 import React from "react";
-import { browserHistory, IndexLink, Link } from "react-router";
-import Svg from "./svg";
-
+import { NavLink, Link } from "react-router-dom";
+import Svg from "../svg";
 const PATHS = [
   "/",
   "/employers",
@@ -44,25 +43,25 @@ export default class Menu extends React.Component {
   render() {
     let bgEnabledClassString = this.state.bgEnabled ? "bg-enabled" : "";
     let src = this.state.isOpen
-      ? "/img/general/cross.svg"
-      : "/img/general/menu.svg";
+      ? "/images/general/cross.svg"
+      : "/images/general/menu.svg";
     let hamMenuClass = this.state.isOpen ? "active" : "";
     let homeClass = this.state.home ? "home" : "";
     let logo = this.state.home
-      ? "/img/general/logowhite.svg"
-      : "/img/general/logo.svg";
+      ? "/images/general/logowhite.svg"
+      : "/images/general/logo.svg";
     return (
       <div className="menu-wrapper">
         <Svg
-          src="/img/general/hamburger.svg"
+          src="/images/general/hamburger.svg"
           className={"menu-icon " + hamMenuClass}
           onClick={this._toggleMenu}
         />
         <div className={"overlay " + hamMenuClass} onClick={this._toggleMenu} />
         <nav className={"menu " + bgEnabledClassString + " " + homeClass}>
-          <IndexLink to="/" className="menu-item logo" activeClassName="active">
+          <NavLink to="/" className="menu-item logo" activeClassName="active">
             <img src={logo} className="menu-logo" />
-          </IndexLink>
+          </NavLink>
           <Link
             className="menu-item"
             activeClassName="active"
@@ -77,6 +76,7 @@ export default class Menu extends React.Component {
             className="menu-item"
             href="https://getvested.io/blog/"
             target="_blank"
+            rel="noopener"
           >
             <span> Blog </span>
           </a>
@@ -91,14 +91,18 @@ export default class Menu extends React.Component {
           </a>
         </nav>
         <div className={"mobile-menu " + hamMenuClass}>
-          <IndexLink
+          <NavLink
             to="/"
             className="menu-item logo"
             activeClassName="active"
             onClick={this._toggleMenu}
           >
-            <img src="/img/general/logo.svg" className="menu-logo" />
-          </IndexLink>
+            <img
+              src="/images/general/logo.svg"
+              alt="logo"
+              className="menu-logo"
+            />
+          </NavLink>
           <Link
             className="menu-item"
             activeClassName="active"
@@ -150,7 +154,7 @@ export default class Menu extends React.Component {
   };
 
   _handleClick = e => {
-    if (window.location.pathname == "/") {
+    if (window.location.pathname === "/") {
       document.dispatchEvent(new Event("scrollToTop"));
       this._toggleMenu();
       return;

@@ -29,7 +29,7 @@ const HowWeDoIt = () => ({
               <ul className="list-unstyled">
                 {Timeline.map((item, index) => {
                   return (
-                    <li key={index}>
+                    <li key={"aa" + index}>
                       <div>
                         <p className="h2">{"0" + (index + 1)}</p>
                       </div>
