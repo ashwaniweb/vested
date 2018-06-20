@@ -36,6 +36,7 @@ const Candidates = () => ({
           buttonLink="/"
           buttonText="Sign Up"
           btnStyle="primary"
+          custClass="candidate"
         />
         <WhatWho
           heading="What We Believe"

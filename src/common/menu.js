@@ -72,12 +72,8 @@ export default class Menu extends React.Component {
 
   render() {
     let bgEnabledClassString = this.state.bgEnabled ? "bg-enabled" : "";
-    // let src = this.state.isOpen
-    //   ? "/images/general/cross.svg"
-    //   : "/images/general/menu.svg";
     let hamMenuClass = this.state.isOpen ? "active" : "";
-    let homeClass = this.state.home ? "home" : "";
-    let logo = this.state.home
+    let logo = !this.state.bgEnabled
       ? "/images/general/logowhite.svg"
       : "/images/general/logo.svg";
     return (
@@ -88,7 +84,7 @@ export default class Menu extends React.Component {
           onClick={this.toggleMenu}
         />
         <div className={"overlay " + hamMenuClass} onClick={this.toggleMenu} />
-        <nav className={"menu " + bgEnabledClassString + " " + homeClass}>
+        <nav className={"menu " + bgEnabledClassString}>
           <NavLink to="/" className="menu-item logo" activeClassName="active">
             <img src={logo} className="menu-logo" alt="Vested" />
           </NavLink>

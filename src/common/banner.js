@@ -4,7 +4,7 @@ import { Row, Grid, Button } from "react-bootstrap";
 const Banner = () => ({
   render() {
     return (
-      <section className="banner">
+      <section className={"banner " + this.props.custClass}>
         <Grid fluid>
           <Row>
             <div>

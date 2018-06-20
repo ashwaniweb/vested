@@ -41,23 +41,25 @@
       background-color: #fafafa;
       background-color: #fff;
       box-shadow: 0 2px 14px 0 rgba(1, 1, 1, 0.1);
-      .menu-item.login span {
-        color: #1870e6;
-        border-color: #1870e6;
-      }
-    }
-    &.home .menu-item {
-      &.login span {
-        color: #fff;
-        border-color: #fff;
-      }
-      span {
-        color: #fff;
+      .menu-item {
+        color: #292929;
+        &.login {
+          color: #fff;
+          span {
+            color: #1870e6;
+            border-color: #1870e6;
+          }
+        }
+        &.sign-up {
+          color: #fff;
+          span {
+            border-color: #1870e6;
+          }
+        }
       }
     }
     .menu-item {
       position: relative;
-      color: #000;
       font-size: 0.875rem;
       font-weight: 600;
       padding: 8px 16px;
@@ -66,15 +68,13 @@
       align-self: stretch;
       display: flex;
       align-items: center;
+      color: #fff;
       &:before {
         height: 4px;
         border-radius: 2px;
         background-color: #1870e6;
         opacity: 0;
         transition: 0.4s linear;
-      }
-      span {
-        color: #292929;
       }
       &:nth-child(2) {
         margin-left: auto;
@@ -113,7 +113,7 @@
         span {
           border: 1px solid #1870e6;
           border-radius: 3px;
-          color: #1870e6;
+          border-color: #fff;
           padding: 12px 32px;
         }
       }
@@ -123,7 +123,6 @@
           display: none;
         }
         span {
-          color: #fff;
           background-color: #1870e6;
           margin-left: 16px;
           margin-left: 8px;
