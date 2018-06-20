@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
-import Svg from "../svg";
+import { NavLink } from "react-router-dom";
+import Svg from "./svg";
 const PATHS = [
   "/",
   "/employers",
@@ -19,14 +19,44 @@ export default class Menu extends React.Component {
     user: "candidate"
   };
 
+  onScroll = () => {
+    let bodyScrollTop =
+      document.documentElement.scrollTop || document.body.scrollTop;
+    if (bodyScrollTop > 80 && !this.state.bgEnabled) {
+      this.setState({ bgEnabled: true, home: false });
+    } else if (
+      bodyScrollTop < 80 &&
+      PATHS.indexOf(window.location.pathname) > -1 &&
+      this.state.bgEnabled
+    ) {
+      this.setState({ bgEnabled: false, home: true });
+    } else if (bodyScrollTop < 80 && this.state.bgEnabled) {
+      this.setState({ bgEnabled: false });
+    }
+  };
+
+  toggleMenu = e => {
+    if (this.state.isOpen === true) this.setState({ isOpen: false });
+    else this.setState({ isOpen: true });
+  };
+
+  handleClick = e => {
+    if (window.location.pathname === "/") {
+      document.dispatchEvent(new Event("scrollToTop"));
+      this.toggleMenu();
+      return;
+    }
+    this.toggleMenu();
+  };
+
   componentDidMount() {
     let home = true;
     this.setState({ currentPath: window.location.pathname, home });
-    document.addEventListener("scroll", this._onScroll);
+    document.addEventListener("scroll", this.onScroll);
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (window.location.pathname != this.state.currentPath) {
+    if (window.location.pathname !== this.state.currentPath) {
       let home = false;
       if (PATHS.indexOf(window.location.pathname) > -1) home = true;
       this.setState({ currentPath: window.location.pathname, home });
@@ -42,9 +72,9 @@ export default class Menu extends React.Component {
 
   render() {
     let bgEnabledClassString = this.state.bgEnabled ? "bg-enabled" : "";
-    let src = this.state.isOpen
-      ? "/images/general/cross.svg"
-      : "/images/general/menu.svg";
+    // let src = this.state.isOpen
+    //   ? "/images/general/cross.svg"
+    //   : "/images/general/menu.svg";
     let hamMenuClass = this.state.isOpen ? "active" : "";
     let homeClass = this.state.home ? "home" : "";
     let logo = this.state.home
@@ -55,28 +85,32 @@ export default class Menu extends React.Component {
         <Svg
           src="/images/general/hamburger.svg"
           className={"menu-icon " + hamMenuClass}
-          onClick={this._toggleMenu}
+          onClick={this.toggleMenu}
         />
-        <div className={"overlay " + hamMenuClass} onClick={this._toggleMenu} />
+        <div className={"overlay " + hamMenuClass} onClick={this.toggleMenu} />
         <nav className={"menu " + bgEnabledClassString + " " + homeClass}>
           <NavLink to="/" className="menu-item logo" activeClassName="active">
-            <img src={logo} className="menu-logo" />
+            <img src={logo} className="menu-logo" alt="Vested" />
           </NavLink>
-          <Link
+          <NavLink
             className="menu-item"
             activeClassName="active"
             to="/professionals"
           >
             <span> Professionals </span>
-          </Link>
-          <Link className="menu-item" activeClassName="active" to="/employers">
+          </NavLink>
+          <NavLink
+            className="menu-item"
+            activeClassName="active"
+            to="/employers"
+          >
             <span> Employers </span>
-          </Link>
+          </NavLink>
           <a
             className="menu-item"
             href="https://getvested.io/blog/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             <span> Blog </span>
           </a>
@@ -95,7 +129,7 @@ export default class Menu extends React.Component {
             to="/"
             className="menu-item logo"
             activeClassName="active"
-            onClick={this._toggleMenu}
+            onClick={this.toggleMenu}
           >
             <img
               src="/images/general/logo.svg"
@@ -103,62 +137,32 @@ export default class Menu extends React.Component {
               className="menu-logo"
             />
           </NavLink>
-          <Link
+          <NavLink
             className="menu-item"
             activeClassName="active"
             to="/professionals"
-            onClick={this._toggleMenu}
+            onClick={this.toggleMenu}
           >
             <span> Professionals </span>
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             className="menu-item"
             activeClassName="active"
             to="/employers"
-            onClick={this._toggleMenu}
+            onClick={this.toggleMenu}
           >
             <span> Employers </span>
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             className="menu-item"
             activeClassName="active"
             to="/blog"
-            onClick={this._toggleMenu}
+            onClick={this.toggleMenu}
           >
             <span> Blog </span>
-          </Link>
+          </NavLink>
         </div>
       </div>
     );
   }
-
-  _onScroll = () => {
-    let bodyScrollTop =
-      document.documentElement.scrollTop || document.body.scrollTop;
-    if (bodyScrollTop > 80 && !this.state.bgEnabled) {
-      this.setState({ bgEnabled: true, home: false });
-    } else if (
-      bodyScrollTop < 80 &&
-      PATHS.indexOf(window.location.pathname) > -1 &&
-      this.state.bgEnabled
-    ) {
-      this.setState({ bgEnabled: false, home: true });
-    } else if (bodyScrollTop < 80 && this.state.bgEnabled) {
-      this.setState({ bgEnabled: false });
-    }
-  };
-
-  _toggleMenu = e => {
-    if (this.state.isOpen === true) this.setState({ isOpen: false });
-    else this.setState({ isOpen: true });
-  };
-
-  _handleClick = e => {
-    if (window.location.pathname === "/") {
-      document.dispatchEvent(new Event("scrollToTop"));
-      this._toggleMenu();
-      return;
-    }
-    this._toggleMenu();
-  };
 }

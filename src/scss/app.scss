@@ -1,62 +1,8 @@
 @import "./base";
 @import "./footer";
 @import "./menu";
-img {
-  max-width: 100%;
-}
-body {
-  font-family: "Open Sans", sans-serif;
-}
-section {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  &:first-of-type {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-}
-.heading {
-  font-size: 32px;
-  font-weight: 900;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #000000de;
-  margin-bottom: 40px;
-  margin-top: 0px;
-}
-.dark {
-  background-color: rgba(243, 245, 245, 0.5);
-  .heading {
-    color: #1870e6;
-  }
-}
-
-// .navbar-default {
-//   background: #00000012;
-//   min-height: 80px;
-//   border: 0;
-//   transition: 0.2s linear;
-//   &.sticky {
-//     background-color: #053793;
-//     box-shadow: 0 2px 14px 0 rgba(1, 1, 1, 0.1);
-//     .menu-item {
-//       &.login {
-//         span {
-//           // color: $color_blue;
-//           // border-color: $color_blue;
-//         }
-//       }
-//     }
-//   }
-//   .navbar-brand {
-//     float: left;
-//     height: 80px;
-//     padding: 15px 15px;
-//     font-size: 18px;
-//     line-height: 20px;
-//   }
-// }
+@import "./home";
+@import "./candidates";
 
 .banner {
   position: relative;
@@ -119,7 +65,11 @@ section {
 }
 
 .clientLogo {
+  padding: 0 15px;
   .logoRow {
+    &.mobile {
+      display: none;
+    }
     height: 70px;
     width: 100%;
     display: flex;
@@ -137,6 +87,486 @@ section {
     }
     &:last-child {
       justify-content: space-around;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .row {
+    margin: 0;
+  }
+  .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &:first-of-type {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+  .banner {
+    .container-fluid {
+      padding: 0;
+    }
+  }
+  .mainBanner {
+    position: relative;
+    .center {
+      .right {
+        display: none;
+      }
+      h5 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 50px;
+      }
+    }
+    img {
+      height: 80vh;
+    }
+  }
+
+  .clientLogo {
+    padding: 0 30px;
+    .logoRow {
+      display: none;
+      &.mobile {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      height: auto;
+      width: 100%;
+      flex-wrap: wrap;
+      flex-direction: row;
+      img {
+        max-height: 60px;
+        margin: 15px 10px;
+        max-width: 90px;
+      }
+    }
+  }
+
+  .theBenefits {
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+    [class*="col-md"] {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+    img {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    .box {
+      text-align: center;
+    }
+  }
+
+  .howWeDoIt {
+    ul {
+      li {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        div {
+          margin: 0;
+          .h2 {
+            font-size: 18px;
+            margin-top: 0;
+          }
+          &:first-child {
+            margin-right: 0;
+            .h2 {
+              color: #1870e6;
+              margin-bottom: 0;
+              margin-top: 15px;
+            }
+          }
+          p {
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.67;
+            letter-spacing: normal;
+            color: rgba(0, 0, 0, 0.54);
+          }
+        }
+      }
+    }
+  }
+
+  .reviews {
+    & > .col-md-12 {
+      padding: 2rem;
+      background-position: 15px 75px, 98% 340px;
+    }
+  }
+
+  .banner {
+    position: relative;
+
+    .center {
+      transform: translateX(-50%) translateY(-50%);
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      h5 {
+        z-index: 5;
+        margin-bottom: 15px;
+        margin-top: 0;
+        font-size: 22px;
+        line-height: 1;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.3px;
+        text-align: center;
+        color: rgba(250, 251, 252, 0.73);
+        margin-bottom: 50px;
+        width: 33%;
+      }
+      .btn {
+        padding: 10px 15px;
+        border-radius: 47px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .row {
+    margin: 0;
+  }
+  .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &:first-of-type {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+  .banner {
+    .container-fluid {
+      padding: 0;
+    }
+  }
+  .mainBanner {
+    position: relative;
+    .center {
+      .right {
+        display: none;
+      }
+      h5 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 50px;
+      }
+    }
+    img {
+      height: 80vh;
+    }
+  }
+
+  .clientLogo {
+    padding: 0 30px;
+    .logoRow {
+      display: none;
+      &.mobile {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      height: auto;
+      width: 100%;
+      flex-wrap: wrap;
+      flex-direction: row;
+      img {
+        max-height: 60px;
+        margin: 15px 10px;
+        max-width: 90px;
+      }
+    }
+  }
+
+  .theBenefits {
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+    [class*="col-md"] {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+    img {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    .box {
+      text-align: center;
+    }
+  }
+
+  .howWeDoIt {
+    ul {
+      li {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        div {
+          margin: 0;
+          .h2 {
+            font-size: 18px;
+            margin-top: 0;
+          }
+          &:first-child {
+            margin-right: 0;
+            .h2 {
+              color: #1870e6;
+              margin-bottom: 0;
+              margin-top: 15px;
+            }
+          }
+          p {
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.67;
+            letter-spacing: normal;
+            color: rgba(0, 0, 0, 0.54);
+          }
+        }
+      }
+    }
+  }
+
+  .reviews {
+    & > .col-md-12 {
+      padding: 2rem;
+      background-position: 15px 75px, 98% 340px;
+    }
+  }
+
+  .banner {
+    position: relative;
+
+    .center {
+      transform: translateX(-50%) translateY(-50%);
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      h5 {
+        z-index: 5;
+        margin-bottom: 15px;
+        margin-top: 0;
+        font-size: 22px;
+        line-height: 1;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.3px;
+        text-align: center;
+        color: rgba(250, 251, 252, 0.73);
+        margin-bottom: 50px;
+        width: 33%;
+      }
+      .btn {
+        padding: 10px 15px;
+        border-radius: 47px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .row {
+    margin: 0;
+  }
+  .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &:first-of-type {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+  .banner {
+    .container-fluid {
+      padding: 0;
+    }
+  }
+  .mainBanner {
+    position: relative;
+    .center {
+      .right {
+        display: none;
+      }
+      h5 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 50px;
+      }
+    }
+    img {
+      height: 80vh;
+    }
+  }
+
+  .clientLogo {
+    padding: 0 30px;
+    .logoRow {
+      display: none;
+      &.mobile {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      height: auto;
+      width: 100%;
+      flex-wrap: wrap;
+      flex-direction: row;
+      img {
+        max-height: 60px;
+        margin: 15px 10px;
+        max-width: 90px;
+      }
+    }
+  }
+
+  .theBenefits {
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+    [class*="col-md"] {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+    img {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    .box {
+      text-align: center;
+    }
+  }
+
+  .howWeDoIt {
+    ul {
+      li {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        div {
+          margin: 0;
+          .h2 {
+            font-size: 18px;
+            margin-top: 0;
+          }
+          &:first-child {
+            margin-right: 0;
+            .h2 {
+              color: #1870e6;
+              margin-bottom: 0;
+              margin-top: 15px;
+            }
+          }
+          p {
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.67;
+            letter-spacing: normal;
+            color: rgba(0, 0, 0, 0.54);
+          }
+        }
+      }
+    }
+  }
+
+  .reviews {
+    & > .col-md-12 {
+      padding: 2rem;
+      background-position: 15px 75px, 98% 340px;
+    }
+  }
+
+  .banner {
+    position: relative;
+
+    .center {
+      transform: translateX(-50%) translateY(-50%);
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      h5 {
+        z-index: 5;
+        margin-bottom: 15px;
+        margin-top: 0;
+        font-size: 22px;
+        line-height: 1;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.3px;
+        text-align: center;
+        color: rgba(250, 251, 252, 0.73);
+        margin-bottom: 50px;
+        width: 33%;
+      }
+      .btn {
+        padding: 10px 15px;
+        border-radius: 47px;
+        font-size: 12px;
+      }
     }
   }
 }

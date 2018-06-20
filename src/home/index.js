@@ -6,7 +6,6 @@ import HeroBanner from "./mainBanner";
 import TheBenefits from "./benefits";
 import HowWeDoIt from "./howWeDoIt";
 import OurClients from "./ourClients";
-import "./home.scss";
 
 const Home = () => ({
   render() {

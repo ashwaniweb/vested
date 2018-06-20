@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import ClientsLogo from "../common/clientsLogo";
 import Banner from "../common/banner";
-import "./candidates.scss";
 import WhatWho from "../common/whatWho";
 import HowItWorks from "./howItWork";
 import Benefits from "./benefits";
