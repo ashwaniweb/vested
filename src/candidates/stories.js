@@ -14,7 +14,7 @@ class Stories extends Component {
             <Col xs={12} md={8}>
               <div className="box">
                 <img
-                  src="/images/testimonial1.jpg"
+                  src="/images/nicola.png"
                   alt="Nicola M, Controller"
                   className="img-circle"
                 />
@@ -32,7 +32,7 @@ class Stories extends Component {
             <Col xs={12} md={8} mdPush={4}>
               <div className="box">
                 <img
-                  src="/images/testimonial2.jpg"
+                  src="/images/duane.jpg"
                   alt="Duane, Accountant"
                   className="img-circle"
                 />
