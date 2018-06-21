@@ -30,13 +30,13 @@ const Candidates = () => ({
       <Fragment>
         <Banner
           heading="Find A Job You Love"
-          img="./images/splash-2"
+          img="./images/candidates/splash"
           imgAlt="Ready to Revamp Your Hiring Process?"
           content="Show Off Your Skills.  Stand Out.  Find Meaningful Work."
           buttonLink="/"
           buttonText="Sign Up"
           btnStyle="primary"
-          custClass="candidate"
+          custClass="candidates"
         />
         <WhatWho
           heading="What We Believe"

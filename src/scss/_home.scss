@@ -32,39 +32,29 @@
       z-index: 5;
       margin-bottom: 0;
       margin-top: 0;
-      font-size: 3rem;
       font-weight: 600;
       line-height: normal;
       letter-spacing: 2.3px;
       color: #ffffff;
     }
     a {
-      font-size: 14px;
       font-weight: 600;
       line-height: normal;
       letter-spacing: -0.1px;
-      text-align: right;
       color: #ffffff;
-      width: 185px;
       text-align: center;
       margin-top: 15px;
       text-decoration: underline;
     }
     p {
-      font-size: 28px;
       font-weight: normal;
       line-height: normal;
-      letter-spacing: 0.3px;
       color: #ffffff;
-      margin-bottom: 50px;
     }
     .btn {
-      padding: 15px 25px;
       border-radius: 0;
-      font-size: 18px;
       font-weight: 600;
       letter-spacing: normal;
-      color: #fafbfc;
       &.btn-default {
         background-color: #ffffff;
         color: #1870e6;
