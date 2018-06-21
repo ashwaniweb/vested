@@ -6,7 +6,7 @@ const Main = () => (
   <main>
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route path="/candidates" component={Candidates} />
+      <Route path="/professionals" component={Candidates} />
     </Switch>
   </main>
 );

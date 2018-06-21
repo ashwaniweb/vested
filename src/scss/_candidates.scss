@@ -1,13 +1,11 @@
 .whatWeBelieve {
-  padding: 30px 0 50px 0;
   h2 {
     margin: 15px 0;
   }
   p {
     font-size: 18px;
     font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
+
     line-height: 1.93;
     letter-spacing: normal;
     text-align: center;
@@ -32,26 +30,26 @@
       width: 4px;
       background-color: #7070851e;
       top: 15px;
-      bottom: 130px;
+      bottom: 172px;
       left: 50%;
       margin-left: -2px;
     }
     .item {
-      padding: 10px 40px 50px 40px;
+      padding: 0px 40px 50px;
       position: relative;
       width: 50%;
       counter-increment: myIndex;
-      &:after {
+      /*       &:after {
         content: "";
         position: absolute;
-        width: 16px;
-        height: 16px;
-        right: -8px;
+        width: 10px;
+        height: 10px;
+        right: -5px;
         background-color: #1870e6;
         top: 8px;
         border-radius: 50%;
         z-index: 1;
-      }
+      } */
       &:before {
         content: counter(myIndex, decimal-leading-zero);
         font-size: 78px;
@@ -71,38 +69,56 @@
           position: absolute;
           right: -140px;
         }
+        h3 {
+          &:before {
+            right: -75px;
+          }
+        }
       }
 
       &.right {
         left: 50%;
         text-align: left;
+
         &:before {
           left: -140px;
         }
         &:after {
-          left: -8px;
+          left: -5px;
+        }
+        h3 {
+          &:before {
+            left: -75px;
+          }
         }
       }
       .content {
         padding: 0 30px;
-        // background-color: #ddd;
         position: relative;
-        // border-radius: 6px;
         h3 {
           font-size: 24px;
           font-weight: 800;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: normal;
+          line-height: 1;
           letter-spacing: normal;
           color: #1870e6;
           margin-top: 0;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #1870e6;
+            top: 50%;
+            border-radius: 50%;
+            z-index: 1;
+            transform: translateY(-50%);
+          }
         }
         p {
           font-size: 18px;
           font-weight: normal;
-          font-style: normal;
-          font-stretch: normal;
+
           line-height: 1.78;
           letter-spacing: normal;
           color: #0000008a;
@@ -166,8 +182,8 @@
         color: #0000008a;
       }
       img {
-        transform: translateY(-50%) translateX(-50%);
-        top: 50%;
+        transform: translateX(-50%);
+        top: 40px;
         position: absolute;
         left: 0;
         width: 150px;
@@ -202,8 +218,7 @@
       margin-top: 0;
       font-size: 48px;
       font-weight: 600;
-      font-style: normal;
-      font-stretch: normal;
+
       line-height: normal;
       letter-spacing: 2.3px;
       text-align: center;
@@ -212,8 +227,7 @@
     p {
       font-size: 28px;
       font-weight: 300;
-      font-style: normal;
-      font-stretch: normal;
+
       line-height: normal;
       letter-spacing: 0.3px;
       text-align: center;
@@ -226,8 +240,7 @@
       border-radius: 47px;
       font-size: 18px;
       font-weight: 600;
-      font-style: normal;
-      font-stretch: normal;
+
       line-height: normal;
       letter-spacing: normal;
       &.btn-default {

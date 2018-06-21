@@ -26,26 +26,26 @@ img {
 }
 
 section {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 65px;
+  padding-bottom: 65px;
   &:first-of-type {
     padding-top: 0px;
     padding-bottom: 0px;
   }
 }
 .heading {
-  font-size: 32px;
-  font-weight: 900;
+  font-size: 2rem;
+  font-weight: 800;
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #000000de;
   margin-bottom: 40px;
   margin-top: 0px;
+  color: rgba(0, 0, 0, 0.87);
+  &.blue {
+    color: #1870e6;
+  }
 }
 .dark {
   background-color: rgba(243, 245, 245, 0.5);
-  .heading {
-    color: #1870e6;
-  }
 }

@@ -28,7 +28,7 @@ class HowItWorks extends Component {
       <section className="howToWork">
         <Grid>
           <Row>
-            <h2 className="heading">How It Works</h2>
+            <h2 className="heading mt-0 pb-5">How It Works</h2>
             <div className="timeline">
               {Timeline.map((item, index) => {
                 return (

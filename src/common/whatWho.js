@@ -9,7 +9,7 @@ const WhatWho = () => ({
       >
         <Grid>
           <Row>
-            <Col xs={12} md={12} className="text-center">
+            <Col xs={12} md={10} mdPush={1} className="text-center pl-5 pr-5">
               <img src="/images/idea.svg" alt={this.props.heading} />
               {this.props.heading && (
                 <h2 className="heading">{this.props.heading}</h2>

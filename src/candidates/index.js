@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
-import ClientsLogo from "../common/clientsLogo";
 import Banner from "../common/banner";
 import WhatWho from "../common/whatWho";
 import HowItWorks from "./howItWork";
 import Benefits from "./benefits";
 import Stories from "./stories";
 import BannerNew from "./bannerNew";
+import Company from "../common/company";
 const images = [
   {
     name: "splash1",
@@ -46,7 +46,7 @@ const Candidates = () => ({
         <HowItWorks />
         <Benefits />
         <Stories />
-        <ClientsLogo />
+        <Company />
         <BannerNew
           heading="Ready To Get Vested?"
           images={images}

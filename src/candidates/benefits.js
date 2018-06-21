@@ -7,13 +7,16 @@ class Benefits extends Component {
         <Grid>
           <Row>
             <Col xs={12} md={12} className="text-center">
-              <h2 className="heading">Benefits</h2>
+              <h2 className="heading pb-5">Benefits</h2>
             </Col>
           </Row>
           <Row>
             <Col xs={12} md={6}>
               <div className="box">
-                <img src="/images/StandApart.svg" alt="Stand Apart" />
+                <img
+                  src="/images/candidates/StandApart.svg"
+                  alt="Stand Apart"
+                />
                 <h4>Stand Apart From The Pack</h4>
                 <p>
                   Resumes are broken. Forget about credentials, background, and
@@ -25,7 +28,10 @@ class Benefits extends Component {
             </Col>
             <Col xs={12} md={6}>
               <div className="box">
-                <img src="/images/Company.svg" alt="Find a company" />
+                <img
+                  src="/images/candidates/Company.svg"
+                  alt="Find a company"
+                />
                 <h4>Find a company you love</h4>
                 <p>
                   Our process assess multiple qualities of both the employee and
