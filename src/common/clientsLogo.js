@@ -50,6 +50,17 @@ class ClientsLogo extends Component {
         <Grid>
           <Row>
             <div className="clientLogo">
+              <div className="logoRow mobile">
+                {Logo.map(item => {
+                  return (
+                    <img
+                      key={item.name}
+                      src={"./images/clients/" + item.url}
+                      alt={item.name}
+                    />
+                  );
+                })}
+              </div>
               <div className="logoRow">
                 {Logo.slice(0, 5).map(item => {
                   return (

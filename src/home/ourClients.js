@@ -14,7 +14,7 @@ class OurClients extends Component {
   }
   render() {
     return (
-      <section className="ourClients dark">
+      <section className="ourClients">
         <Grid>
           <Row>
             <Col xs={12} md={12} className="text-center">
@@ -70,7 +70,7 @@ class OurClients extends Component {
             >
               <div>
                 <img
-                  src="/images/james.jpg"
+                  src="/images/home/james.jpg"
                   alt="James"
                   className="img-circle"
                 />
@@ -87,7 +87,7 @@ class OurClients extends Component {
             >
               <div>
                 <img
-                  src="/images/anshuman.jpg"
+                  src="/images/home/anshuman.jpg"
                   alt="Anshuman"
                   className="img-circle"
                 />

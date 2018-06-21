@@ -1,12 +1,11 @@
 import React, { Fragment } from "react";
-import ClientsLogo from "../common/clientsLogo";
 import Banner from "../common/banner";
-import "./candidates.scss";
 import WhatWho from "../common/whatWho";
 import HowItWorks from "./howItWork";
 import Benefits from "./benefits";
 import Stories from "./stories";
 import BannerNew from "./bannerNew";
+import Company from "../common/company";
 const images = [
   {
     name: "splash1",
@@ -31,12 +30,13 @@ const Candidates = () => ({
       <Fragment>
         <Banner
           heading="Find A Job You Love"
-          img="./images/splash-2.jpg"
+          img="./images/splash-2"
           imgAlt="Ready to Revamp Your Hiring Process?"
           content="Show Off Your Skills.  Stand Out.  Find Meaningful Work."
           buttonLink="/"
           buttonText="Sign Up"
           btnStyle="primary"
+          custClass="candidate"
         />
         <WhatWho
           heading="What We Believe"
@@ -46,7 +46,7 @@ const Candidates = () => ({
         <HowItWorks />
         <Benefits />
         <Stories />
-        <ClientsLogo />
+        <Company />
         <BannerNew
           heading="Ready To Get Vested?"
           images={images}

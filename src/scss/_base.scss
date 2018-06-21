@@ -1,54 +1,51 @@
-/*  @BASE
-    This is the base stylesheet that will be included in all our other stylesheets. Used for variables
-    and other personal mixins. This is also the place where we import our base bourbon and neat components
-*/
-@import "bourbon";
-//HEADER FONT SIZES
-$xx1: rem(74px);
-$x1: rem(48px);
-$h1: rem(37px);
-$h2: rem(28px);
-$h3: rem(24px);
-$h4: rem(22px);
-
-//BODY FONT SIZES
-$p1: rem(18px);
-$p2: rem(16px);
-$p3: rem(14px);
-$p4: rem(12px);
-
-$padding1: rem(64px);
-$max: rem(1200px);
-
-$body_margin: calc(#{$padding1}* 1.5 - 16px);
-
-/* Color pallette */
-$color_red: #e41b22;
-$color_grey: #292929;
-$color_light_grey: #f4f4f4;
-
-$color_blue: #1870e6;
-$color_grey_light: #f2f2f2;
-$color_blackish: #4a4a4a;
-$color_grey_text: #979797;
-
-/* /Fonts */
-$font_header: "futura-pt", sans-serif;
-// $font_body : "Adelle", serif;
-$font_body: "open-sans", sans-serif;
-$font: "open-sans", sans-serif;
-
-.pseudo-base {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+html {
+  font-size: 16px;
+  @media (max-width: 1200px) {
+    font-size: 12px;
+    h2 {
+      font-size: 2rem !important;
+    }
+  }
+  @media (max-width: 1000px) {
+    font-size: 12px;
+  }
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+}
+body {
+  background-color: #fff;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+  font-size: 100%;
+  line-height: 1;
+}
+img {
+  max-width: 100%;
 }
 
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+section {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  &:first-of-type {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+.heading {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 0px;
+  color: rgba(0, 0, 0, 0.87);
+  &.blue {
+    color: #1870e6;
+  }
+}
+.dark {
+  background-color: rgba(243, 245, 245, 0.5);
 }

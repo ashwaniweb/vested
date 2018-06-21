@@ -24,7 +24,7 @@ const HowWeDoIt = () => ({
       <section className="howWeDoIt">
         <Grid>
           <Row>
-            <h2 className="heading">How We Do It</h2>
+            <h2 className="heading blue">How We Do It</h2>
             <Col sm={12} md={6}>
               <ul className="list-unstyled">
                 {Timeline.map((item, index) => {
@@ -43,7 +43,7 @@ const HowWeDoIt = () => ({
               </ul>
             </Col>
             <Col sm={12} md={6}>
-              <img src="/images/HowWeDoIt.png" alt="How We Do It" />
+              <img src="/images/home/howWeDoIt.png" alt="How We Do It" />
             </Col>
           </Row>
         </Grid>

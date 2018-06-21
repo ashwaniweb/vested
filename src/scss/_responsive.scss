@@ -1,0 +1,285 @@
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (min-width: 320px) {
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .heading {
+    margin-bottom: 2rem;
+  }
+  .menu-wrapper {
+    .menu-icon {
+      left: 1.5rem;
+    }
+    nav.menu {
+      .menu-item:nth-child(6) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+  .mainBanner {
+    img {
+      height: 80vh;
+      max-height: 520px;
+    }
+    .center {
+      h5 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.1rem;
+        letter-spacing: 0.3px;
+        margin-bottom: 2rem;
+      }
+      .btn {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+      a {
+        font-size: 0.9rem;
+        width: 135px;
+      }
+      .right {
+        display: none;
+      }
+    }
+  }
+  .theBenefits {
+    .row {
+      flex-direction: column;
+      [class*="col-md"] {
+        flex-direction: column;
+        text-align: center;
+        img {
+          margin-right: 0;
+          margin-bottom: 1.8rem;
+        }
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    .box p {
+      font-size: 18px;
+    }
+  }
+  .howWeDoIt {
+    ul {
+      li {
+        flex-direction: column;
+        margin-bottom: 2rem;
+        div {
+          text-align: center;
+          &:first-child {
+            margin-right: 0;
+            text-align: center;
+          }
+          .h2 {
+            margin-top: 0;
+          }
+          p {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .reviews {
+    & > .col-md-12 {
+      border-left-width: 0;
+      border-right-width: 0;
+      padding: 2rem 4rem;
+      background-position: 15px 80px;
+    }
+  }
+  .reviewsTab {
+    & > div {
+      justify-content: flex-start;
+      border-left: 2px solid transparent;
+      border-top: 0;
+      margin-top: 1px;
+      &.active {
+        border-color: #1870e6;
+        background: #f0f0f0;
+        border-left: 2px solid #1870e6;
+      }
+      & > div {
+        padding: 10px 0px;
+      }
+    }
+  }
+  .banner {
+    &.home {
+      .center {
+        h5 {
+          margin-bottom: 20px;
+          margin-top: 0;
+          font-size: 2rem;
+          letter-spacing: normal;
+          line-height: 1.2;
+        }
+        .btn.btn-default {
+          padding: 1rem 1.5rem;
+          font-size: 1rem;
+        }
+      }
+    }
+    img {
+      width: auto;
+      height: 60vh;
+      max-height: 600px;
+    }
+  }
+  .companies {
+    padding-top: 0;
+  }
+  // ccscsc
+}
+
+/* smartphones, Android phones, landscape iPhone */
+@media (min-width: 480px) {
+}
+/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width: 600px) {
+}
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width: 801px) {
+}
+/* big landscape tablets, laptops, and desktops */
+@media (min-width: 1025px) {
+}
+
+/* hi-res laptops and desktops */
+@media (min-width: 1281px) {
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .heading {
+    margin-bottom: 2.5rem;
+  }
+  .menu-wrapper {
+    .menu-icon {
+      left: 3rem;
+    }
+    nav.menu {
+      .menu-item:nth-child(6) {
+        margin-right: 3rem;
+      }
+    }
+  }
+  .mainBanner {
+    img {
+      height: auto;
+      max-height: initial;
+    }
+    .center {
+      h5 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 28px;
+        letter-spacing: 0.3px;
+        margin-bottom: 2rem;
+      }
+      .btn {
+        padding: 15px 25px;
+        font-size: 1.2rem;
+      }
+      a {
+        font-size: 0.9rem;
+        width: 185px;
+      }
+      .right {
+        display: initial;
+      }
+    }
+  }
+  .theBenefits {
+    .row {
+      flex-direction: row;
+      [class*="col-md"] {
+        flex-direction: row;
+        text-align: left;
+        img {
+          margin-right: 25px;
+          margin-bottom: 0;
+        }
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .box p {
+      font-size: 18px;
+    }
+  }
+  .howWeDoIt {
+    ul {
+      li {
+        flex-direction: row;
+        margin-bottom: 0;
+        div {
+          text-align: left;
+          &:first-child {
+            margin-right: 15px;
+            text-align: left;
+          }
+          .h2 {
+            margin-top: 20px;
+          }
+          p {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+  .reviews {
+    & > .col-md-12 {
+      border-left-width: 1px;
+      border-right-width: 1px;
+      padding: 4rem;
+      background-position: 25px;
+    }
+  }
+  .reviewsTab {
+    & > div {
+      justify-content: center;
+      border-left: 0 solid transparent;
+      border-top: 2px solid transparent;
+      margin-top: -2px;
+      &.active {
+        border-left: 0 solid transparent;
+        border-top-color: #1870e6;
+        background: transparent;
+      }
+      & > div {
+        padding: 25px;
+      }
+    }
+  }
+
+  .banner {
+    &.home {
+      .center {
+        h5 {
+          margin-bottom: 30px;
+          margin-top: 0;
+          font-size: 2rem;
+          letter-spacing: normal;
+          line-height: 1.2;
+        }
+        .btn.btn-default {
+          padding: 15px 35px;
+          font-size: 1rem;
+        }
+      }
+    }
+    img {
+      width: auto;
+      height: initial;
+      max-height: initial;
+    }
+  }
+}

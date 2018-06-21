@@ -1,40 +1,61 @@
 footer.footer {
   margin-top: 0px;
+  .join-newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #eee;
+    padding: 32px;
+    text-align: center;
+    h1 {
+      font-family: "futura-pt", sans-serif;
+      text-transform: uppercase;
+      font-size: 1.75rem;
+    }
+    p {
+      color: #979797;
+      font-size: 1.375rem;
+      margin-bottom: 16px;
+    }
+    button {
+      background-color: #1870e6;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      color: #fff;
+    }
+  }
   .links {
     padding: 24px 0;
     background-color: #f7f7f7;
-
+    display: flex;
+    align-items: center;
+    padding: 24px 4rem;
     .site-map {
+      margin-left: calc(4rem * 1.5 - 16px);
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: left;
-
+      justify-content: center;
       a {
         padding: 0 24px;
         white-space: nowrap;
-        @media (max-width: 650px) {
-          padding: 0 16px;
-          margin-bottom: 24px;
-        }
         &:nth-child(1) {
           padding-left: 0;
         }
         span {
           color: #4a4a4a;
           font-weight: 600;
-          font-size: 14px;
+          font-size: 0.875rem;
           text-transform: uppercase;
         }
       }
     }
     .social {
-      justify-content: flex-end;
-      display: flex;
-      align-items: center;
+      margin-left: auto;
+      margin-right: calc(4rem * 1.5 - 16px);
       span {
         display: inline-block;
-        font-size: 12px;
+        font-size: 0.75rem;
         font-weight: 700;
         color: #4a4a4a;
       }
@@ -42,7 +63,7 @@ footer.footer {
         display: inline-block;
         vertical-align: middle;
         margin-left: 20px;
-        img {
+        svg {
           width: 20px;
           height: 20px;
         }
@@ -50,14 +71,14 @@ footer.footer {
     }
   }
   .policy {
-    padding: 24px 0;
+    padding: 30px 4rem;
     margin: 0;
     position: relative;
     span {
       display: inline-block;
       height: 100%;
       vertical-align: middle;
-      font-size: rem(10px);
+      font-size: 0.625rem;
       text-transform: uppercase;
       color: #979797;
       font-weight: 600;
@@ -70,14 +91,120 @@ footer.footer {
       height: auto;
       margin-right: 48px;
     }
-
+    .col {
+      width: 50%;
+      margin: 0;
+      margin-left: calc(4rem * 1.5 - 16px);
+    }
     .copyright {
       display: inline-block;
-      text-align: right;
+      position: absolute;
+      top: 28px;
+      right: 9rem;
+      right: calc(4rem + calc(4rem * 1.5 - 16px));
       span {
         margin-right: 0;
-        font-size: 12px;
+        font-size: 0.75rem;
       }
     }
+  }
+}
+
+@media (max-width: 800px) {
+  footer.footer .links .site-map {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  footer.footer .links .site-map {
+    margin-left: 3rem;
+  }
+}
+
+@media (max-width: 650px) {
+  footer.footer .links .site-map a {
+    padding: 0 16px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  footer.footer .links .social {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  footer.footer .links .social {
+    margin-right: 3rem;
+  }
+}
+
+@media (max-width: 570px) {
+  footer.footer .links {
+    flex-direction: column;
+    justify-content: center;
+    .site-map {
+      margin: 0px auto;
+    }
+    .social {
+      margin: 0px auto;
+      padding-top: 15px;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  footer.footer .policy span {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  footer.footer .policy .col {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 630px) {
+  footer.footer .policy .col {
+    img {
+      margin-right: 24px;
+    }
+    span {
+      margin-right: 16px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  footer.footer .policy .col {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  footer.footer .policy .copyright {
+    right: 8.67rem;
+    right: calc(4rem + calc(4rem * 1.5 - 16px));
+  }
+}
+
+@media (max-width: 800px) {
+  footer.footer .policy .copyright {
+    right: 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  footer.footer .policy .copyright {
+    top: inherit;
+    right: 50%;
+    transform: translateX(50%);
+    width: 100%;
+    text-align: center;
   }
 }

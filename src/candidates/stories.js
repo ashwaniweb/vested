@@ -3,7 +3,7 @@ import { Row, Grid, Col } from "react-bootstrap";
 class Stories extends Component {
   render() {
     return (
-      <section className="stories">
+      <section className="stories pb-0">
         <Grid>
           <Row>
             <Col xs={12} md={12} className="text-center">
@@ -14,15 +14,15 @@ class Stories extends Component {
             <Col xs={12} md={8}>
               <div className="box">
                 <img
-                  src="/images/testimonial1.jpg"
+                  src="/images/candidates/nicola.png"
                   alt="Nicola M, Controller"
                   className="img-circle"
                 />
                 <p>
                   Signing up for Vested was well worth the effort. Once I
                   completed my profile it was sent to an employer who had an
-                  opening they hadn’t posted. The job was mine before anyone
-                  other candidate knew it existed
+                  opening they hadn’t posted. The job was mine before any other
+                  candidate knew it existed.
                 </p>
                 <h5>Nicola M, Controller</h5>
               </div>
@@ -32,7 +32,7 @@ class Stories extends Component {
             <Col xs={12} md={8} mdPush={4}>
               <div className="box">
                 <img
-                  src="/images/testimonial2.jpg"
+                  src="/images/candidates/duane.jpg"
                   alt="Duane, Accountant"
                   className="img-circle"
                 />

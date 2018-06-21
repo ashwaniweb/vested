@@ -3,7 +3,7 @@ import { Row, Grid, Col } from "react-bootstrap";
 class TheBenefits extends Component {
   render() {
     return (
-      <section className="theBenefits dark">
+      <section className="theBenefits">
         <Grid>
           <Row>
             <Col xs={12} md={12} className="text-center">
@@ -12,7 +12,7 @@ class TheBenefits extends Component {
           </Row>
           <Row>
             <Col xs={12} md={4}>
-              <img src="/images/group-5.png" alt="Stand Apart" />
+              <img src="/images/home/group-5.png" alt="Stand Apart" />
               <div className="box">
                 <h4>Lower Time to Fill</h4>
                 <p>
@@ -21,7 +21,7 @@ class TheBenefits extends Component {
               </div>
             </Col>
             <Col xs={12} md={4}>
-              <img src="/images/team.svg" alt="Stand Apart" />
+              <img src="/images/home/team.svg" alt="Stand Apart" />
               <div className="box">
                 <h4>Increased diversity</h4>
                 <p>
@@ -31,7 +31,7 @@ class TheBenefits extends Component {
               </div>
             </Col>
             <Col xs={12} md={4}>
-              <img src="/images/team.svg" alt="Stand Apart" />
+              <img src="/images/home/team.svg" alt="Stand Apart" />
               <div className="box">
                 <h4>Reduce Attrition</h4>
                 <p>

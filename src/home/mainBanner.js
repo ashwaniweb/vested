@@ -6,7 +6,8 @@ const HeroBanner = () => ({
     return (
       <section className="mainBanner">
         <img
-          src="/images/splash-3.jpg"
+          src="./images/home/splash.jpg"
+          srcSet="./images/home/splash@2x.jpg 2x, ./images/home/splash@3x.jpg 3x"
           alt="Ready to Revamp Your Hiring Process?"
         />
         <div className="center">
@@ -23,7 +24,7 @@ const HeroBanner = () => ({
               </Col>
               <Col sm={12} md={6} className="right">
                 <img
-                  src="/images/bulb.svg"
+                  src="/images/home/bulb.svg"
                   alt="Ready to Revamp Your Hiring Process?"
                 />
               </Col>

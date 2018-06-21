@@ -1,62 +1,15 @@
-@import "./base";
-@import "./footer";
-@import "./menu";
-img {
-  max-width: 100%;
-}
-body {
-  font-family: "Open Sans", sans-serif;
-}
-section {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  &:first-of-type {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-}
-.heading {
-  font-size: 32px;
-  font-weight: 900;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #000000de;
-  margin-bottom: 40px;
-  margin-top: 0px;
-}
-.dark {
-  background-color: rgba(243, 245, 245, 0.5);
-  .heading {
-    color: #1870e6;
-  }
-}
+@import "base";
+@import "variables";
+@import "flex";
+@import "display";
+@import "position";
+@import "spacing";
 
-// .navbar-default {
-//   background: #00000012;
-//   min-height: 80px;
-//   border: 0;
-//   transition: 0.2s linear;
-//   &.sticky {
-//     background-color: #053793;
-//     box-shadow: 0 2px 14px 0 rgba(1, 1, 1, 0.1);
-//     .menu-item {
-//       &.login {
-//         span {
-//           // color: $color_blue;
-//           // border-color: $color_blue;
-//         }
-//       }
-//     }
-//   }
-//   .navbar-brand {
-//     float: left;
-//     height: 80px;
-//     padding: 15px 15px;
-//     font-size: 18px;
-//     line-height: 20px;
-//   }
-// }
+@import "footer";
+@import "menu";
+@import "home";
+@import "candidates";
+@import "responsive";
 
 .banner {
   position: relative;
@@ -78,8 +31,6 @@ section {
       margin-top: 0;
       font-size: 48px;
       font-weight: 600;
-      font-style: normal;
-      font-stretch: normal;
       line-height: normal;
       letter-spacing: 2.3px;
       text-align: center;
@@ -88,8 +39,6 @@ section {
     p {
       font-size: 28px;
       font-weight: 300;
-      font-style: normal;
-      font-stretch: normal;
       line-height: normal;
       letter-spacing: 0.3px;
       text-align: center;
@@ -98,12 +47,10 @@ section {
       width: 33%;
     }
     .btn {
-      padding: 15px 50px;
+      padding: 15px 35px;
       border-radius: 47px;
       font-size: 18px;
       font-weight: 600;
-      font-style: normal;
-      font-stretch: normal;
       line-height: normal;
       letter-spacing: normal;
       &.btn-default {
@@ -119,7 +66,11 @@ section {
 }
 
 .clientLogo {
+  padding: 0 15px;
   .logoRow {
+    &.mobile {
+      display: none;
+    }
     height: 70px;
     width: 100%;
     display: flex;
@@ -138,5 +89,27 @@ section {
     &:last-child {
       justify-content: space-around;
     }
+  }
+}
+
+.companies {
+  position: relative;
+  overflow: hidden;
+  .companies-strip {
+    background: url("/images/mobileStrip.png") repeat-x;
+    height: 100px;
+    background-size: contain;
+    object-fit: contain;
+    width: 5076px;
+    animation: slide 60s linear infinite;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, 0, 0);
   }
 }
