@@ -14,7 +14,7 @@ class Benefits extends Component {
             <Col xs={12} md={6}>
               <div className="box">
                 <img
-                  src="/images/candidates/StandApart.svg"
+                  src="/images/candidates/standApart.svg"
                   alt="Stand Apart"
                 />
                 <h4>Stand Apart From The Pack</h4>
@@ -29,7 +29,7 @@ class Benefits extends Component {
             <Col xs={12} md={6}>
               <div className="box">
                 <img
-                  src="/images/candidates/Company.svg"
+                  src="/images/candidates/company.svg"
                   alt="Find a company"
                 />
                 <h4>Find a company you love</h4>
