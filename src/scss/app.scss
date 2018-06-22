@@ -12,104 +12,104 @@
 @import "responsive";
 
 .banner {
-  position: relative;
-  img {
-    width: 100%;
-  }
-  .center {
-    transform: translateX(-50%) translateY(-50%);
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    h5 {
-      z-index: 5;
-      margin-bottom: 30px;
-      margin-top: 0;
-      font-size: 48px;
-      font-weight: 600;
-      line-height: normal;
-      letter-spacing: 2.3px;
-      text-align: center;
-      color: #ffffff;
+    position: relative;
+    img {
+        width: 100%;
     }
-    p {
-      font-size: 28px;
-      font-weight: 300;
-      line-height: normal;
-      letter-spacing: 0.3px;
-      text-align: center;
-      color: rgba(250, 251, 252, 0.73);
-      margin-bottom: 50px;
-      width: 33%;
+    .center {
+        transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        h5 {
+            z-index: 5;
+            margin-bottom: 30px;
+            margin-top: 0;
+            font-size: 48px;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 2.3px;
+            text-align: center;
+            color: #ffffff;
+        }
+        p {
+            font-size: 28px;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: 0.3px;
+            text-align: center;
+            color: rgba(250, 251, 252, 0.73);
+            margin-bottom: 50px;
+            width: 33%;
+        }
+        .btn {
+            padding: 15px 35px;
+            border-radius: 47px;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: normal;
+            &.btn-default {
+                background-color: #ffffff;
+                color: #1870e6;
+            }
+            &.btn-primary {
+                background-color: #1870e6;
+                color: #ffffff;
+            }
+        }
     }
-    .btn {
-      padding: 15px 35px;
-      border-radius: 47px;
-      font-size: 18px;
-      font-weight: 600;
-      line-height: normal;
-      letter-spacing: normal;
-      &.btn-default {
-        background-color: #ffffff;
-        color: #1870e6;
-      }
-      &.btn-primary {
-        background-color: #1870e6;
-        color: #ffffff;
-      }
-    }
-  }
 }
 
 .clientLogo {
-  padding: 0 15px;
-  .logoRow {
-    &.mobile {
-      display: none;
+    padding: 0 15px;
+    .logoRow {
+        &.mobile {
+            display: none;
+        }
+        height: 70px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px 0;
+        img {
+            max-width: 280px;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+        &:nth-child(2n) {
+            justify-content: space-around;
+        }
+        &:last-child {
+            justify-content: space-around;
+        }
     }
-    height: 70px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 15px 0;
-    img {
-      max-width: 280px;
-      max-height: 100%;
-      width: auto;
-      height: auto;
-    }
-    &:nth-child(2n) {
-      justify-content: space-around;
-    }
-    &:last-child {
-      justify-content: space-around;
-    }
-  }
 }
 
 .companies {
-  position: relative;
-  overflow: hidden;
-  .companies-strip {
-    background: url("/images/mobileStrip.png") repeat-x;
-    height: 100px;
-    background-size: contain;
-    object-fit: contain;
-    width: 5076px;
-    animation: slide 60s linear infinite;
-  }
+    position: relative;
+    overflow: hidden;
+    .companies-strip {
+        background: url("/images/mobileStrip.png") repeat-x;
+        height: 100px;
+        background-size: contain;
+        object-fit: contain;
+        width: 5076px;
+        animation: slide 60s linear infinite;
+    }
 }
 
 @keyframes slide {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-1692px, 0, 0);
-  }
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-1692px, 0, 0);
+    }
 }

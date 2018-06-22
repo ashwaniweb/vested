@@ -1,51 +1,51 @@
 html {
-  font-size: 16px;
-  @media (max-width: 1200px) {
-    font-size: 12px;
-    h2 {
-      font-size: 2rem !important;
+    font-size: 16px;
+    @media (max-width: 1200px) {
+        font-size: 12px;
+        h2 {
+            font-size: 2rem !important;
+        }
     }
-  }
-  @media (max-width: 1000px) {
-    font-size: 12px;
-  }
-  @media (max-width: 600px) {
-    font-size: 14px;
-  }
+    @media (max-width: 1000px) {
+        font-size: 12px;
+    }
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
 }
 body {
-  background-color: #fff;
-  width: 100vw;
-  overflow-x: hidden;
-  font-family: "Open Sans", sans-serif;
-  font-size: 100%;
-  line-height: 1;
+    background-color: #fff;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%;
+    line-height: 1;
 }
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 section {
-  padding-top: 65px;
-  padding-bottom: 65px;
-  &:first-of-type {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
+    padding-top: 65px;
+    padding-bottom: 65px;
+    &:first-of-type {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
 }
 .heading {
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  margin-bottom: 40px;
-  margin-top: 0px;
-  color: rgba(0, 0, 0, 0.87);
-  &.blue {
-    color: #1870e6;
-  }
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    color: rgba(0, 0, 0, 0.87);
+    &.blue {
+        color: #1870e6;
+    }
 }
 .dark {
-  background-color: rgba(243, 245, 245, 0.5);
+    background-color: rgba(243, 245, 245, 0.5);
 }
