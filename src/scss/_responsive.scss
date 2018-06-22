@@ -176,47 +176,40 @@
 
     .timeline {
       &:after {
-        bottom: 60px;
+        bottom: 90px;
         left: 22px;
       }
       .item {
         width: 100%;
         padding: 10px 20px;
+        margin-bottom: 20px;
         &:before {
-          left: 50%;
           top: 50%;
           z-index: -10;
           transform: translateX(-50%) translateY(-40%);
         }
         &.left {
-          left: 0;
-          text-align: left;
-          h3:before {
-            left: -33px;
-          }
           &:before {
-            left: 50%;
-            top: 50%;
-            z-index: -10;
-            transform: translateX(-50%) translateY(-40%);
+            right: initial;
+            left: 35%;
+          }
+          h3 {
+            &:before {
+              right: initial;
+              left: -33px;
+            }
           }
         }
-
         &.right {
           left: 0;
-          text-align: left;
-          h3:before {
-            left: -33px;
-          }
           &:before {
-            left: 50%;
-            top: 50%;
-            z-index: -10;
-            transform: translateX(-50%) translateY(-40%);
+            left: 35%;
+            right: initial;
           }
-          &:after {
-            left: 14px;
-            top: 12px;
+          h3 {
+            &:before {
+              left: -33px;
+            }
           }
         }
         .content {
@@ -227,6 +220,42 @@
           }
           p {
             font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .benefits {
+    .row {
+      flex-direction: column;
+      .col-md-6 {
+        padding: 0 40px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .stories {
+    .row {
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px 20px 20px 20px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        img {
+          top: -50px;
+          left: 50%;
+          width: 100px;
+          height: 100px;
+        }
+      }
+      &:nth-child(odd) {
+        .box {
+          padding: 60px 20px 20px 20px;
+          img {
+            top: -50px;
+            left: 50%;
           }
         }
       }
@@ -643,9 +672,105 @@
         max-height: initial;
       }
     }
+    &.candidates {
+      img {
+        width: 100%;
+        height: initial;
+        max-height: initial;
+      }
+    }
   }
   .companies {
     padding-top: 0;
+  }
+
+  .howToWork {
+    h2 {
+      margin-bottom: 40px;
+    }
+    .timeline {
+      &:after {
+        bottom: 120px;
+        left: 50%;
+      }
+      .item {
+        width: 50%;
+        padding: 0 40px 0;
+        margin-bottom: 50px;
+        &:before {
+          top: 20%;
+          transform: translateX(-50%) translateY(-40%);
+        }
+        &.left {
+          &:before {
+            left: initial;
+            right: -200px;
+          }
+          h3 {
+            &:before {
+              left: initial;
+              right: -75px;
+            }
+          }
+        }
+        &.right {
+          left: 50%;
+          &:before {
+            left: -110px;
+          }
+          h3 {
+            &:before {
+              left: -75px;
+            }
+          }
+        }
+        .content {
+          padding: 0 30px;
+          position: relative;
+          h3 {
+            font-size: 24px;
+            width: 100%;
+          }
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  .benefits {
+    .row {
+      flex-direction: row;
+      .col-md-6 {
+        padding: 0 15px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .stories {
+    .row {
+      .box {
+        display: initial;
+        padding: 30px 30px 30px 100px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        img {
+          top: initial;
+          left: 0;
+          width: 150px;
+          height: 150px;
+        }
+      }
+      &:nth-child(odd) {
+        .box {
+          padding: 30px 100px 30px 30px;
+          img {
+            top: auto;
+            left: 100%;
+          }
+        }
+      }
+    }
   }
   // ccscsc
 }

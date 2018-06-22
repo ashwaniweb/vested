@@ -34,7 +34,7 @@ class HowItWorks extends Component {
                 return (
                   <div
                     key={index}
-                    className={index % 2 === 0 ? "item right" : "item left"}
+                    className={index % 2 === 0 ? "item left" : "item right"}
                   >
                     <div className="content">
                       <h3>{item.heading}</h3>

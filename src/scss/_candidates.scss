@@ -39,17 +39,6 @@
       position: relative;
       width: 50%;
       counter-increment: myIndex;
-      /*       &:after {
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        right: -5px;
-        background-color: #1870e6;
-        top: 8px;
-        border-radius: 50%;
-        z-index: 1;
-      } */
       &:before {
         content: counter(myIndex, decimal-leading-zero);
         font-size: 78px;
@@ -61,36 +50,6 @@
         top: 0;
         position: absolute;
         z-index: 1;
-      }
-      &.left {
-        left: 0;
-        text-align: right;
-        &:before {
-          position: absolute;
-          right: -140px;
-        }
-        h3 {
-          &:before {
-            right: -75px;
-          }
-        }
-      }
-
-      &.right {
-        left: 50%;
-        text-align: left;
-
-        &:before {
-          left: -140px;
-        }
-        &:after {
-          left: -5px;
-        }
-        h3 {
-          &:before {
-            left: -75px;
-          }
-        }
       }
       .content {
         padding: 0 30px;
