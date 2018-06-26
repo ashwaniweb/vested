@@ -37,8 +37,8 @@ class HowItWorks extends Component {
                                         key={index}
                                         className={
                                             index % 2 === 0
-                                                ? "item left"
-                                                : "item right"
+                                                ? "item right"
+                                                : "item left"
                                         }
                                     >
                                         <div className="content">

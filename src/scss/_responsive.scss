@@ -165,7 +165,7 @@
         }
     }
     .companies {
-        padding-top: 0;
+        padding-top: 1rem;
     }
 
     .howToWork {
@@ -248,6 +248,7 @@
                     left: 50%;
                     width: 100px;
                     height: 100px;
+                    border-radius: 50%;
                 }
             }
             &:nth-child(odd) {
@@ -531,9 +532,6 @@
             }
         }
     }
-    .companies {
-        padding-top: 0;
-    }
     // ccscsc
 }
 
@@ -593,6 +591,9 @@
             [class*="col-md"] {
                 flex-direction: row;
                 text-align: left;
+                h2 {
+                    margin-bottom: 3.5rem;
+                }
                 img {
                     margin-right: 25px;
                     margin-bottom: 0;
@@ -602,8 +603,13 @@
                 }
             }
         }
-        .box p {
-            font-size: 18px;
+        .box {
+            h4 {
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 18px;
+            }
         }
     }
     .howWeDoIt {
@@ -679,10 +685,13 @@
                 height: initial;
                 max-height: initial;
             }
+            .center {
+                .btn.btn-primary {
+                    padding: 0.82rem 2.75rem;
+                    font-size: 1rem;
+                }
+            }
         }
-    }
-    .companies {
-        padding-top: 0;
     }
 
     .howToWork {
@@ -751,22 +760,23 @@
     .stories {
         .row {
             .box {
-                display: initial;
+                justify-content: space-between;
                 padding: 30px 30px 30px 100px;
                 margin-top: 0;
                 margin-bottom: 20px;
                 img {
-                    top: initial;
+                    top: 50%;
                     left: 0;
                     width: 150px;
                     height: 150px;
+                    transform: translateY(-50%) translateX(-50%);
                 }
             }
             &:nth-child(odd) {
                 .box {
                     padding: 30px 100px 30px 30px;
                     img {
-                        top: auto;
+                        top: 50%;
                         left: 100%;
                     }
                 }
@@ -880,7 +890,7 @@
                     line-height: 1.2;
                 }
                 .btn.btn-default {
-                    padding: 15px 35px;
+                    padding: 13px 40px;
                     font-size: 1rem;
                 }
             }
