@@ -102,21 +102,21 @@ export default class Menu extends React.Component {
                     >
                         <span> Professionals </span>
                     </NavLink>
-                    <NavLink
+                    {/* <NavLink
                         className="menu-item"
                         activeClassName="active"
                         to="/employers"
                     >
                         <span> Employers </span>
-                    </NavLink>
-                    <a
+                    </NavLink> */}
+                    {/* <a
                         className="menu-item"
                         href="https://getvested.io/blog/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <span> Blog </span>
-                    </a>
+                    </a> */}
                     <a
                         className="menu-item login"
                         href={`/app/${this.state.user}/login`}

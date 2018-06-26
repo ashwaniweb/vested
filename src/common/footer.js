@@ -30,13 +30,13 @@ class Links extends React.Component {
                     <Link to="/temporary-jobs">
                         <span> Temporary </span>
                     </Link>
-                    <a
+                    {/* <a
                         href="https://getvested.io/blog/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <span> Blog </span>
-                    </a>
+                    </a> */}
                     <Link to="/faq">
                         <span> FAQ </span>
                     </Link>

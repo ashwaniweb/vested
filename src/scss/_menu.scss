@@ -61,7 +61,7 @@
         .menu-item {
             position: relative;
             font-size: 0.875rem;
-            font-weight: 600;
+            font-weight: 400;
             padding: 8px 16px;
             border-bottom: 2px solid transparent;
             transition: 0.3s linear;
@@ -115,10 +115,12 @@
                     border-radius: 3px;
                     border-color: #fff;
                     padding: 12px 32px;
+                    font-weight: 700;
                 }
             }
             &.sign-up {
                 padding: 8px;
+                // margin-right: 9rem;
                 &:before {
                     display: none;
                 }

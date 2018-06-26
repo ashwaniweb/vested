@@ -12,7 +12,7 @@
             left: 1.5rem;
         }
         nav.menu {
-            .menu-item:nth-child(6) {
+            .menu-item:last-child {
                 margin-right: 1.5rem;
             }
         }
@@ -278,7 +278,7 @@
             left: 1.5rem;
         }
         nav.menu {
-            .menu-item:nth-child(6) {
+            .menu-item:last-child {
                 margin-right: 1.5rem;
             }
         }
@@ -413,7 +413,7 @@
             left: 1.5rem;
         }
         nav.menu {
-            .menu-item:nth-child(6) {
+            .menu-item:last-child {
                 margin-right: 1.5rem;
             }
         }
@@ -551,7 +551,7 @@
             left: 1.5rem;
         }
         nav.menu {
-            .menu-item:nth-child(6) {
+            .menu-item:last-child {
                 margin-right: 1.5rem;
             }
         }
@@ -580,6 +580,7 @@
             }
             .left {
                 align-items: flex-start;
+                justify-content: space-evenly;
             }
             .right {
                 display: initial;
@@ -789,7 +790,7 @@
             left: 3rem;
         }
         nav.menu {
-            .menu-item:nth-child(6) {
+            .menu-item:last-child {
                 margin-right: 3rem;
             }
         }

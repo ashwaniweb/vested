@@ -14,16 +14,24 @@ const HeroBanner = () => ({
                     <Grid>
                         <Row>
                             <Col sm={12} md={8} className="left">
-                                <h5 className="h1">Redefine Recruiting </h5>
-                                <p className="h2">
-                                    Vested Technology is transforming the way<br />
-                                    companies discover, qualify, and hire top
-                                    talent
-                                </p>
-                                <Button className="btn btn-primary">
-                                    Are You Hiring?
-                                </Button>
-                                <Link to="/">Looking For a Job?</Link>
+                                <div>
+                                    <h5 className="h1">Redefine Recruiting </h5>
+                                    <p className="h2 mb-5">
+                                        Vested Technology is transforming the
+                                        way<br />
+                                        companies discover, qualify, and hire
+                                        top talent
+                                    </p>
+                                </div>
+                                <div>
+                                    <Button
+                                        bsStyle="primary"
+                                        className="font-weight-normal"
+                                    >
+                                        Are You Hiring?
+                                    </Button>
+                                    <Link to="/">Looking For a Job?</Link>
+                                </div>
                             </Col>
                             <Col sm={12} md={6} className="right">
                                 <img
