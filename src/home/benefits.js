@@ -39,7 +39,7 @@ class TheBenefits extends Component {
                         </Col>
                         <Col xs={12} md={4}>
                             <img
-                                src="/images/home/team.svg"
+                                src="/images/home/employee.svg"
                                 alt="Stand Apart"
                             />
                             <div className="box">
