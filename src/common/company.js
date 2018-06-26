@@ -3,15 +3,11 @@ import { Row, Grid } from "react-bootstrap";
 const Company = () => ({
     render() {
         return (
-            <section className="companies">
-                <Grid fluid>
-                    <Row>
-                        <div className="companies">
-                            <div className="companies-strip" />
-                        </div>
-                    </Row>
-                </Grid>
-            </section>
+
+            <div className="companies">
+                <div className="companies-strip" />
+            </div>
+
         );
     }
 });

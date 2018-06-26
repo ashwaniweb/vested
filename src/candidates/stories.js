@@ -33,7 +33,7 @@ class Stories extends Component {
                         <Col xs={12} md={8} mdPush={4}>
                             <div className="box">
                                 <img
-                                    src="/images/candidates/duane.jpg"
+                                    src="/images/candidates/duane.png"
                                     alt="Duane, Accountant"
                                     className="img-circle"
                                 />
