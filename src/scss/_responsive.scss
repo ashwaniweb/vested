@@ -188,7 +188,7 @@
                 margin-bottom: 20px;
                 &:before {
                     top: 50%;
-                    z-index: -10;
+                    z-index: 0;
                     transform: translateX(-50%) translateY(-40%);
                 }
                 &.left {
