@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Row, Grid } from "react-bootstrap";
 const Timeline = [
     {
-        heading: "Create A Unique Profile",
+        heading: "Create a Unique Profile",
         content:
             "Tell us what you’re looking for in the next step of your career"
     },

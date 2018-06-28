@@ -14,7 +14,7 @@ const Home = () => ({
                 <HeroBanner />
                 <WhatWho
                     heading="Who We Are"
-                    text="We’re the first talent marketplace that goes beyond resumes and algorithms.  We provide a 360 degree view of candidates’ skills, personality, and values before they reach your desk."
+                    text="We’re the first talent marketplace that goes beyond resumes and algorithms.   We provide a 360 degree view of a candidate’s skills, personality, and values before they reach your desk."
                     dark={true}
                 />
                 <TheBenefits />

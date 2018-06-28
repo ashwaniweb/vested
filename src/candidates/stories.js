@@ -52,7 +52,6 @@ class Stories extends Component {
                         </Col>
                     </Row>
                 </Grid>
-                <hr />
             </section>
         );
     }
