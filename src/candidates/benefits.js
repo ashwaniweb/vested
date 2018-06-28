@@ -17,13 +17,11 @@ class Benefits extends Component {
                                     src="/images/candidates/standApart.svg"
                                     alt="Stand Apart"
                                 />
-                                <h4>Stand Apart From The Pack</h4>
+                                <h4>Stand Apart From the Pack</h4>
                                 <p>
                                     Resumes are broken. Forget about
                                     credentials, background, and recruiter bias.
-                                    Vested presents a 360 degree view of your
-                                    work personality and skills so you find the
-                                    right step in your career
+                                    Vested presents a 360 degree view of your work, personality, and skills so you find the right step in your career.
                                 </p>
                             </div>
                         </Col>
@@ -33,7 +31,7 @@ class Benefits extends Component {
                                     src="/images/candidates/company.svg"
                                     alt="Find a company"
                                 />
-                                <h4>Find a company you love</h4>
+                                <h4>Find a Company You Love</h4>
                                 <p>
                                     Our process assess multiple qualities of
                                     both the employee and employer allowing us

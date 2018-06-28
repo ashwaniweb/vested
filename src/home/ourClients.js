@@ -34,15 +34,7 @@ class OurClients extends Component {
                                                     FOUND THE PERFECT MATCH!
                                                 </h4>
                                                 <p>
-                                                    Finding the right talent is
-                                                    tough and time consuming.
-                                                    With Vested, we’ve
-                                                    significantly shortened our
-                                                    hiring process as they
-                                                    provide us screened
-                                                    candidates that have the
-                                                    necessary skills and match
-                                                    our company’s culture
+                                                    Vested has helped us cut out significant pieces of our recruiting process.  Their emphasis on identifying candidates’ skills and personality during their screening process is unique.  We were able to discover cultural fits and hire quality candidates faster. This has saved us time and money.  I highly recommend the platform!
                                                 </p>
                                             </div>
                                         </Col>
@@ -52,18 +44,10 @@ class OurClients extends Component {
                                         <Col xs={12} md={12}>
                                             <div className="box">
                                                 <h4>
-                                                    FOUND THE PERFECT MATCH! 2
+                                                    FOUND THE PERFECT MATCH!
                                                 </h4>
                                                 <p>
-                                                    Finding the right talent is
-                                                    tough and time consuming.
-                                                    With Vested, we’ve
-                                                    significantly shortened our
-                                                    hiring process as they
-                                                    provide us screened
-                                                    candidates that have the
-                                                    necessary skills and match
-                                                    our company’s culture
+                                                    Finding the right talent is never easy and it always takes longer than expected.  With Vested, we’ve significantly shortened our hiring process as they provide us pre-screened candidates that have the skills and personality that match our company’s needs and values.
                                                 </p>
                                             </div>
                                         </Col>

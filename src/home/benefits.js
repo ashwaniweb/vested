@@ -30,10 +30,9 @@ class TheBenefits extends Component {
                                 alt="Stand Apart"
                             />
                             <div className="box">
-                                <h4>Increased diversity</h4>
+                                <h4>Increased Diversity</h4>
                                 <p>
-                                    Eliminate bias by seeing who a candidate is,
-                                    not just where they’ve worked
+                                    Remove bias with the Vested resume and let us help you meet your diversity hiring needs
                                 </p>
                             </div>
                         </Col>
