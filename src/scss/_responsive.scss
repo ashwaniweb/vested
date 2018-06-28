@@ -92,6 +92,9 @@
                 }
             }
         }
+        & > .container .row .d-flex {
+            flex-direction: column;
+        }
     }
     .reviews {
         & > .col-md-12 {
@@ -631,6 +634,9 @@
                     }
                 }
             }
+        }
+        & > .container .row .d-flex {
+            flex-direction: row;
         }
     }
     .reviews {

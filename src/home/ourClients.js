@@ -14,7 +14,7 @@ class OurClients extends Component {
     }
     render() {
         return (
-            <section className="ourClients">
+            <section className="ourClients  pb-0">
                 <Grid>
                     <Row>
                         <Col xs={12} md={12} className="text-center">
@@ -114,6 +114,7 @@ class OurClients extends Component {
                         </Col>
                     </Row>
                 </Grid>
+                <hr />
             </section>
         );
     }
