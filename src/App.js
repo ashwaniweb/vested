@@ -12,6 +12,7 @@ class App extends Component {
 
     componentDidMount() {
         setTimeout(() => this.setState({ loading: false }), 500); // simulates loading of data
+        window.scrollTo(0, 0);
     }
     render() {
         const { loading } = this.state;
@@ -20,7 +21,10 @@ class App extends Component {
             return null; // render null when app is not ready
         }
         return (
-            <Router>
+            <Router
+                onUpdate={() => window.scrollTo(0, 0)}
+                // history={createBrowserHistory()}
+            >
                 <div className="App">
                     <Menu />
                     <Main />

@@ -47,6 +47,14 @@ const Candidates = () => ({
                 <Benefits />
                 <Stories />
                 <Company />
+                <Banner
+                    heading="Ready To Get Vested?"
+                    img="./images/candidates/4PhotoGroup"
+                    imgAlt="Ready To Get Vested?"
+                    buttonLink="/"
+                    buttonText="Sign Up"
+                    custClass=""
+                />
                 <BannerNew
                     heading="Ready To Get Vested?"
                     images={images}
