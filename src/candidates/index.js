@@ -4,39 +4,110 @@ import WhatWho from "../common/whatWho";
 import HowItWorks from "./howItWork";
 import Benefits from "./benefits";
 import Stories from "./stories";
-import BannerNew from "./bannerNew";
 import Company from "../common/company";
-const images = [
+const imagesMain = [
     {
-        name: "splash1",
-        url: "splash.png"
+        url: "splash_w_320.jpg",
+        size: "320w"
     },
     {
-        name: "splash2",
-        url: "splash.png"
+        url: "splash_w_1272.jpg",
+        size: "1272w"
     },
     {
-        name: "splash3",
-        url: "splash.png"
-    },
-    {
-        name: "splash4",
-        url: "splash.png"
+        url: "splash_w_1440.jpg",
+        size: "1440w"
     }
 ];
+const images = [
+    {
+        url: "4PhotoGroup_w_320.png",
+        size: "320w"
+    },
+    {
+        url: "4PhotoGroup_w_458.png",
+        size: "458w"
+    },
+    {
+        url: "4PhotoGroup_w_570.png",
+        size: "570w"
+    },
+    {
+        url: "4PhotoGroup_w_673.png",
+        size: "673w"
+    },
+    {
+        url: "4PhotoGroup_w_758.png",
+        size: "758w"
+    },
+    {
+        url: "4PhotoGroup_w_844.png",
+        size: "844w"
+    },
+    {
+        url: "4PhotoGroup_w_911.png",
+        size: "911w"
+    },
+    {
+        url: "4PhotoGroup_w_981.png",
+        size: "981w"
+    },
+    {
+        url: "4PhotoGroup_w_1046.png",
+        size: "1046w"
+    },
+    {
+        url: "4PhotoGroup_w_1109.png",
+        size: "1109w"
+    },
+    {
+        url: "4PhotoGroup_w_1170.png",
+        size: "1170w"
+    },
+    {
+        url: "4PhotoGroup_w_1230.png",
+        size: "1230w"
+    },
+    {
+        url: "4PhotoGroup_w_1286.png",
+        size: "1286w"
+    },
+    {
+        url: "4PhotoGroup_w_1342.png",
+        size: "1342w"
+    },
+    {
+        url: "4PhotoGroup_w_1396.png",
+        size: "1396w"
+    },
+    {
+        url: "4PhotoGroup_w_1443.png",
+        size: "1443w"
+    },
+    {
+        url: "4PhotoGroup_w_1498.png",
+        size: "1498w"
+    },
+    {
+        url: "4PhotoGroup_w_2880.png",
+        size: "2880w"
+    }
+];
+
 const Candidates = () => ({
     render() {
         return (
             <Fragment>
                 <Banner
                     heading="Find A Job You Love"
-                    img="./images/candidates/splash"
-                    imgAlt="Ready to Revamp Your Hiring Process?"
                     content="Show Off Your Skills.  Stand Out.  Find Meaningful Work."
-                    buttonLink="/"
                     buttonText="Sign Up"
                     btnStyle="primary"
                     custClass="candidates"
+                    buttonLink="/"
+                    images={imagesMain}
+                    imagesFolder="./images/candidates/"
+                    sizes="(max-width: 2880px) 100vw, 2880px"
                 />
                 <WhatWho
                     heading="What We Believe"
@@ -49,17 +120,13 @@ const Candidates = () => ({
                 <Company />
                 <Banner
                     heading="Ready To Get Vested?"
-                    img="./images/candidates/4PhotoGroup"
                     imgAlt="Ready To Get Vested?"
                     buttonLink="/"
                     buttonText="Sign Up"
                     custClass=""
-                />
-                <BannerNew
-                    heading="Ready To Get Vested?"
                     images={images}
-                    buttonLink="/"
-                    buttonText="Sign Up"
+                    imagesFolder="./images/candidates/"
+                    sizes="(max-width: 2880px) 100vw, 2880px"
                 />
             </Fragment>
         );

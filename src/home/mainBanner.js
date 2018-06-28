@@ -5,11 +5,17 @@ const HeroBanner = () => ({
     render() {
         return (
             <section className="mainBanner">
-                <img
-                    src="./images/home/splash.jpg"
-                    srcSet="./images/home/splash@2x.jpg 2x, ./images/home/splash@3x.jpg 3x"
-                    alt="Ready to Revamp Your Hiring Process?"
-                />
+                <picture>
+                    <img
+                        sizes="(max-width: 1440px) 100vw, 1440px"
+                        srcSet="
+                        ./images/home/splash_w_320.jpg 320w,
+                        ./images/home/splash_w_1272.jpg 1272w,
+                        ./images/home/splash_w_1440.jpg 1440w"
+                        src="./images/home/splash_w_1440.jpg"
+                        alt="Ready to Revamp Your Hiring Process?"
+                    />
+                </picture>
                 <div className="center">
                     <Grid>
                         <Row>
