@@ -20,7 +20,7 @@ const HeroBanner = () => ({
                     <Grid>
                         <Row>
                             <Col sm={12} md={8} className="left">
-                                <div>
+                                <div style={{paddingTop:'20px'}}>
                                     <h5 className="h1">Redefine Recruiting </h5>
                                     <p className="h2 mb-5">
                                         Vested Technology is transforming the

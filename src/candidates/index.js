@@ -123,7 +123,7 @@ const Candidates = () => ({
                     imgAlt="Ready To Get Vested?"
                     buttonLink="/"
                     buttonText="Sign Up"
-                    custClass=""
+                    custClass="home pt-0"
                     images={images}
                     imagesFolder="./images/candidates/"
                     sizes="(max-width: 2880px) 100vw, 2880px"

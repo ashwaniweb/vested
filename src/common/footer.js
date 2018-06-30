@@ -21,7 +21,7 @@ class Links extends React.Component {
                     <Link to="/professionals">
                         <span> Professionals </span>
                     </Link>
-                    <Link to="/employers">
+                    {/* <Link to="/employers">
                         <span> Employers </span>
                     </Link>
                     <Link to="/consulting">
@@ -29,7 +29,7 @@ class Links extends React.Component {
                     </Link>
                     <Link to="/temporary-jobs">
                         <span> Temporary </span>
-                    </Link>
+                    </Link> */}
                     {/* <a
                         href="https://getvested.io/blog/"
                         target="_blank"

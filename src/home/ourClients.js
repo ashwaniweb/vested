@@ -98,7 +98,6 @@ class OurClients extends Component {
                         </Col>
                     </Row>
                 </Grid>
-                <hr />
             </section>
         );
     }
