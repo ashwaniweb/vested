@@ -23,8 +23,11 @@
     .mainBanner {
         .container {
             justify-content: center;
+            display: flex;
+            align-items: center;
             .row {
                 justify-content: center;
+                height: 450px;
             }
         }
         img {
